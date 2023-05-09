@@ -1,0 +1,95 @@
+			Day -5
+ 
+Real time case discussion using case buddy and DFM tools
+
+=> Case buddy (DFM, ASC) : group rules case.
+
+Customer has put up - Privilaged Identity management.
+--I managed to change the group for the user, 
+--but the user is still not able to access.
+
+Response :
+--it may be possible that customer may not have read the doc correctly.
+--Share the azure.learn document link and share the information you found in the link.
+
+
+---------------------------------------------------------
+
+Analysis :
+
+
+------------------------------------------------------------------------------------------------------------
+
+Response do's and dont's :
+--it may be possible that customer may not have read the doc correctly.
+=> you can also quickly copy paste this notepad into your e-mail saying. See this is what I see. 
+=> This is the link where we see this information
+=> you can refer to the link while I'm doing some more research and I'll get back to you.
+--and that gives you that way to send that first information (IRT) to the customer with some valid link 
+
+==> rather than just saying, OK, I'm looking into the issue and I'll get back to you. No, OK. Please don't do that. >
+
+-----------------
+Group rules tips :
+
+--> Inform the customer that you know you whenever you try to log in with an in private window 
+-- or when you sign out and sign in. 
+-- That's when you're AAD token gets refreshed and the group rules applies immediately
+--> Azure Active Directory can take upto 24 hours to update dynamic group membership.
+
+-----------------------------------------
+
+--> Azure DevOps -> Org Settings -> Permissions -> Members
+if Type = group it is DevOps group , type = aad group it is Azure Active Directory group.
+ 
+
+This is the force signout, and it will clear cookies in the browser.
+--> aka.ms/vssignout
+-It will signout - Azure devops, visual studio
+--> aex.dev.azure.com
+
+To go to vs profile in Azure portal and check/change the Azure Aztive Directory
+-->aka.ms/vsprofile
+
+============================================================================================
+
+Case-2 :
+Sev a Case 
+
+We are unable to increase the count of MS Hosted CI/CD pipelines from 35 to 50 in our organization (org_name)
+We cannot modify the number that is currently present. Please check and advice at an earliest.
+
+
+Quick qestion : This problem related to pipeline ?
+Answer - NO.
+
+
+=============================================================================================
+
+Case-3 :
+
+We are unable to search/Add Azure Active Directory AAD user in to Azure DevOps Organization ADO.
+
+->For that user who's a PCA(Project Collection Adminstration) in the org but Guest in the AAD(Azure Active Directory),  
+->please go to the AAD and add an assignment role assignment for that user. So there is a role called directory reade
+AAD -> Users -> Select a USer -> Assigned roles -> add assignments -> Directory readers.
+
+
+=>If you search for the complete user mail in org settings -> Users -> Add User
+=>and add the user, by this we can add user to Organization.
+=============================================================================================
+
+
+-> When a user Access Level is (Account- Advanced), the use has basic + test subscription
+
+IRT Initial Response Time - get ready with Initial response template.
+SLA
+Sev A case - severity
+
+
+
+
+-----------------
+
+Can any user in the AAD can access all the Organizations connected to  AAD ?
+If possible , what are the permissions required ?
