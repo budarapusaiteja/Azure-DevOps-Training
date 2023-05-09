@@ -1,0 +1,110 @@
+Day-3
+How to add users, external users to the ORG.
+How to setup Permissions.
+Adding users Advanced Direct Add/ Group Rules.
+ADO Permissions (Collection level/Project level/Policy/Permissions/Checking Preview Features)
+Organization Settings.
+Supported operations with ADO.
+Do's and Dont's with ORG Privacy
+Region change/owner change and Bulk add PCA approval process.
+Connecting MSA ORG to AAD and changing one AAD to a different AAD.
+Troubleshooting various issues faced by customers.
+Understanding 401 / 403 / 500 / 503 and few other error codes.
+Data Handling for Commercial Customer Scenarios.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+https://learn.microsoft.com/en-us/azure/devops/organizations/security/change-project-level-permissions?view=azure-devops&tabs=preview-page 
+https://learn.microsoft.com/en-us/azure/devops/user-guide/manage-organization-collection?view=azure-devops 
+https://learn.microsoft.com/en-us/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#collection-level 
+https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview 
+https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ 
+
+
+Error Codes that are shown to the customers when they try to log in. 
+Now few of the folks that you have access in the Azure DevOps organization, but when you're trying to log in, you're seeing 
+401 error there, right? And sometimes you will also see 
+403 - which is forbidden. 
+500 - it is an internal error. Internal error might happen when the user has some problem with their accoun'
+--if the account has been removed and added again in the org and things like that, you will see that 500 error and 
+503 error is when the service is not working or when the service has been stopped categorically. So that is why I was trying to show you one of my organizations wher
+503 - Service Unavilable
+-- in external organization during migration , service might not be available
+-- we can check this in
+
+ 
+
+------------------------------------------------------------------------------------
+Azure DevOps Organization :
+-> Organization name should not be greater than 50 chars
+-> error : The specified name is reserved - the name is already taken.
+
+ 
+
+-------------------------------------------------------------------------------------
+
+ 
+
+Scenario : when a customer wants to change/ switch a  AAD
+-> Ask customer organization name
+-> search in portal.microsoftgeneva.com/actions
+-> Account Details
+    --Account name, status, created, ID, region
+    --TFS Scale unit. This is something where the production database and production service is being hosted out of right, so it created that for me and it put a note on where that org was created.
+    --Org ID, Owner name, login, ID(VSid)
+    --Early Adopter Stage : Not in early adopter program
+
+ 
+
+
+--> Project Collection Administrator : access is required to change Azure Active Directory.
+
+ 
+
+
+After changing / switch AAD :
+Some users cannot access the organization, because they are not a part of new AAD
+solutions :
+1. adding users to new AAD.
+2. connecting organization to AAD, who has microsoft id can access and user
+
+ 
+------------------
+1. Invited user to new AAD, user has to accept invitation via mail and switch the AAD in Azure
+2. new user has been made Project Collection Administrator in org settings.
+3. now the new user added all other users.
+4. however we cannot add gmail account users, so mapping gmail accoutn users to microsoft accounts.
+
+ 
+
+in general Disconnect directory will take 15mins time.
+if the org has more than 3000 members then the switch directory/ Disconnect directory will take more than 45mins time
+------------------
+
+ 
+
+When a User cannot change AAD, we can do it in 
+portal.microsoftgeneva.com/actions
+under Account Admin - Link Account to Tenant
+for this connection we need Account name, Tenant ID
+
+ 
+
+
+----------------------
+my.visualstudio.com/subscriptions
+manage.visualstudio.com/Subscribers
+
+ 
+
+========================================================================================
+
+ 
+
+Case: When a  customer cannot make a purchase in manage.visualstudio.com/Subscribers
+--marketplace.visualstudio.com/acquisition
+Troubleshooting :
+1. go to azure portal, check if he has the subscription, or added in the subscription
+    --Subscription-> IAM-> Role Assignment
