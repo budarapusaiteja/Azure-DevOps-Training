@@ -1,0 +1,157 @@
+Day-4
+How to move from Server to Service.
+OID conflicts
+Unrecognized Vs Subscription Data Handling for Commercial Customer Scenarios
+Group rules
+OneNote for Standard operating procedures and Troubleshooting Guides
+How to use Case buddy application
+How to use ICM tool.
+Kusto Reviewing logs related to the ORG / User
+DfM for main customer case managent web portal
+
+-----------------------------------------------------------------------------------------------------
+Reference Links
+
+https://casebuddy.blob.core.windows.net/install/x64/production/CaseBuddy64.application
+https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/assign-access-levels-by-group-membership?view=azure-devops 
+Download Azure DevOps Server to Azure DevOps Services Migration Guide and Data Migration Tool from Official Microsoft Download Center
+
+------------------------------------------------------------------------------------------------------
+
+
+            GROUP RULES
+Organization Settings -> Users -> Group rules
+We can do two things :
+1. Assign a liscense alone
+2. Assign a liscense and a project both.
+
+ 
+
+----------------
+
+ 
+
+Adding Users :
+--Before I add you guys(users) to the org,
+--I should be adding you guys first to the AWSAD August website, AAD
+->Azure portal -> Active Directory -> Users -> invite external users 
+    -> User should accept invite request via mail.
+
+How to check user has accepted request or not:
+->Azure portal -> Active Directory -> Users -> select a user -> External user state
+or
+->Azure portal -> Active Directory -> Users -> mange view -> add column External user state
+---------------------
+How users can access the Organization in the AAD :
+-> now AAD owner should create a group of users and set permissions to the group.
+
+
+
+
+Groups prerequisited :
+-> Contributor
+-> Readers
+-> Administrator
+-- A user should not be in two groups.
+-- Azure AD can take up to 24hrs to update dynamic group membership.
+-- Dynamic group membership : 
+-- Remove direct assignment
+----------------
+-- Your organization must be connected to AAD, then only group rules will work.
+-- You must be a member of the project collection administrators group 
+-- To create and Azure AD groups, you need Azure AD administrator permissions or have the directory administrator delegate
+-- Azure AD changes might take up to 1 hour to be visible in Azure DevOps
+------------------
+
+How to create New Group :
+-> Azure portal -> AAD -> groups -> New group 
+--Group name
+--Group description
+--members -no members selected to add group members
+
+
+--------------------
+
+How to create new Group Rules :
+How to set access for groups to Azure DevOps organization :
+->Azure portal -> Active Directory -> Users -> Group rules 
+	-- Azure DevOps or AAD group
+	-- Access level
+	-- Projects
+
+
+
+----------------------
+JARVIS :
+https://jitaccess.security.core.windows.net/Requests/Active
+https://portal.microsoftgeneva.com/actions
+
+So what? All things we have in Jarvis, we have three or four things that is related to group rules. 
+One is we can process the group rules from our side also and we can check the list of group rules also.
+OK. Uh, but you won't be able to see the members of that?
+Ohh AAD unless the user is accepted the meeting the the invite or accept or or access
+
+
+-----------------------
+
+When a user is not able to access the azure portal/ organizaion 
+- after creating group rule and given access (basic/stakeholder)
+Troubleshooting :
+Open Owner Azure portal 
+->Azure portal -> Active Directory -> Users -> select the user -> Sign-in logs
+
+
+
+----------------------
+Hi Trainers completed Day-4, 1st-Video
+I have some doubts
+Questions :
+Other than the owner(who created AAD),What permissions are needed to add users in a AAD ?  = Project Collection Administrator
+When we want to add a user to Organization , can we add a new user who is not available in current AAD ? = NO, should be a member or guest.
+When we include more than 5 users in group rule as basic , for those extra members who will access organization is billable right ? Yes
+
+
+====================================================================================================================================
+					Video -2
+
+	Migrate to Azure DevOps :
+Moving from Server(on-premise) to Service(on-cloud) -
+-- Migrate using the data migration tool and bring your Azure DevOps Server data along.
+-- step-by-step Migration guide
+ 2-steps of migration 
+1. Drive-1 organization
+2. 
+
+-----------------------------
+
+Relationship between Azure DevOps Server databases and Azure DevOps organizations.
+-> Team Project Collection
+-> Azure DevOps Services Organization
+
+--collection ID in organization is the Database name.
+
+---------------------------------------------------------------------------------
+
+		List of all Support Tools we need access to : 
+
+* Moving from Server to Service 
+* OneNote for Standard operating procedures and Troubleshooting Guides 
+	-> Onenote resource : CSS ALM POD Notebook
+* MyAccess for List projects that user needs to be part of 
+	-> myaccess/identityiq/home.jsf
+* ASC Azure Support Center for case realted info 
+* Rave Azure ctive Directory Info 
+* Kusto Reviewing logs related to the ORG / User. Read Only 
+* Jarvis for ORG details and updateing rqeuired settings for the ORG 
+* TDC for requesting for Secure Access Workstation VM (SAW-VM) 
+* Azure Status Page to Check Service outage related Info and _les 
+* DTS for creating Escalation work items for getting help from EG/PG 
+* lcm for reaching out PG teams during CritSits OR For Azure LABs related issues 
+	-> portal.microsofticm.com
+* DfM for main customer case managent web portal 
+* CaseBuddy for customer case management clickonce installed App 
+* Outlook email management tool. 
+	-> Use Drafts -- what to do with this case -- taking notes.
+	-> it is easy to search in drafts.
+	-> When a customer mail is going to junk mail, then right click - Not Junk.
+	-> Create rule for moving to folders.
