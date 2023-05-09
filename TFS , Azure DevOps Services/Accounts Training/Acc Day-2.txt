@@ -1,0 +1,106 @@
+Day-2
+Azure DevOps pricing
+How to setup Billing for Azure Devops
+Azure sub permissions
+How to check DevOps bills in Azure portal.
+What is the difference between Azure Sub and Visual Studio Sub? Sign up for Trial Azure Sub and Dev Essential VS Sub.
+Licensing discussion Stakeholder/Basic/B+T/VS Subs PRO ENT?
+How to buy VS Subclassic, VS Sub benefits.
+What is Microsoft DevLabs in Marketplace
+Making purchases in Marketplace and understanding various portals and usage.
+Understanding supported and unsupported extensions/formats from marketplace.
+CICD Self Hosted Pipeline / MS Hosted Pipeline Artifacts.
+-----------------------------------------------------------------------------------------------------------------------
+
+Reference links :
+https://learn.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops 
+https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/resolve-orphaned-organization?view=azure-devops 
+
+-----------------------------------------------------------------------------------------------------------------------
+ 
+
+                Accounts Training
+
+ 
+
+Video-1 Azure DevOps Services    |    Azure DevOps Server (on-premise env)
+
+ 
+
+Azure DevOps Services :
+			Individual Services               |                   User Licenses
+Azure Pipelines   |    Azure Artifacts        ||             Basic Plan   |   Basic + Test Plans
+
+ 
+
+ 
+
+-> with Basic Plan , we can only view the Test Plans.
+-> with Basic + Test Plans we can create and view Test Plans
+
+ 
+
+-> Azure DevOps Server 2019 licensing - either pay month-on-month or 3-year commitment.
+
+--------------------------------------------------------------------------------------------------------
+
+About user ACCESS LEVELS :
+-> Basic
+-> Account advanced = Basic+Test Plans 
+-> Stakeholders - no access to source code , can access to az boards
+-> Visual Studio Subscriber
+-- Early adopter access level. for microsoft internal organization - top level free access level
+
+Basic + test trial - trial is availble to 30 days - available within the organization level
+
+ 
+
+marketplace.visualstudio.com/subscriptions :
+Visual Studio Professional       |       Visual Studio Enterprise
+-- And the payment is not a cash payment. 
+---The payment has to be done in the Azure environment and it has to be done using an Azure subscription.
+-> Visual Studio Dev Essentials subscription - learning purpose only.
+
+ 
+
+Under a Azure subscription , we can buy any no of Visual studio subscriptions.
+-- We need to have owner access(subscription role = Contributor or owner) to buy VS subscriptions.
+-- With subscription role=reader we can't buy VS subscriptions in marketplace.visualstudio.com
+
+ 
+
+my.visualstudio.com/subscriptions
+---------------------------------------------------------------------------------------------------
+Problem Analysis:
+1st Access Issue
+2nd Permission Issue
+
+ 
+
+----------------------------------------------------------------------------------------------------
+About access levels
+https://learn.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops
+
+ 
+
+Azure DevOps Services | Azure DevOps Server 2022 - Azure DevOps Server 2019 | TFS 2018
+-> Access levels enable administrators to provide their user base access to the features they need and only pay for those features.
+
+ 
+
+ 
+
+=======================================================================================================
+Assign an owner to an orphaned organization
+https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/resolve-orphaned-organization?view=azure-devops
+
+ 
+
+Azure DevOps Services
+
+ 
+
+
+---------------------------------------------------------------------------------------------------------
+
+ 
