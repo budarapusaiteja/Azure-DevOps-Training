@@ -1,0 +1,129 @@
+
+third-party software :
+Can do : 
+• DO make the suggestions you think 
+will help the customer fix its issue — even 
+if that means recommending the 
+customer temporarily remove or disable a 
+piece of third-party software. 
+• DO recommend that the customer 
+contact the third-party software vendor if 
+you think the software might be 
+contributing to the issue in some way. 
+
+And here's what you should avoid: 
+• DO NOT make any value 
+judgements, or offer any personal 
+opinions, about the third-party software 
+(e.g., this software is bad, good, doesn't 
+work well, etc.) 
+• DO NOT recommend the customer 
+replace any piece of third-party software 
+with Microsoft software — that is the 
+customer's choice. 
+
+
+What Went Wrong and How to Fix it 
+The advocate instructed the customer to stop using a piece of third-party antivirus software. 
+a) It is okay to suggest that a customer temporarily uninstall or disable a piece of third-party software to 
+troubleshoot a current problem. 
+b) But an advocate should not tell customers to permanently stop using a piece of third-party software. 
+The advocate told the customer to replace its choice of antivirus software with Microsoft Windows Defender. 
+a) It is okay to recommend to a customer that they speak with the publisher of a piece of third-party software to 
+troubleshoot an issue. 
+b) But customers have the freedom to choose their own software solutions, an advocate should not try to instruct 
+customers to pick Microsoft's solutions. 
+The advocate told the customer that third-party antivirus software would show false reports of viruses. 
+a) Advocates should not share opinions or make comments on how well or poorly a piece of third-party software 
+works or instruct customers to permanently stop using a piece of third-party software. 
+
+
+
+
+How to Identify an Unfair Competition Complaint 
+Any time a customer complains that Microsoft is competing unfairly in 
+some way, that is an unfair competition complaint. 
+Customers may also mention one of the following key words. If you 
+hear one, you should consider that an unfair competition complaint: 
+• Antitrust 
+• Monopoly or Monopolist 
+• Unfair Competition or Competing Unfairly 
+• Anticompetitive 
+• Price Fixing or Fixing Prices 
+Other relevant key words can be found in KB 3153213, Assisting 
+customers wanting to report concerns of integrity, antitrust and fair 
+competition. 
+If you identify an unfair competition complaint, you should refer the 
+customer to Microsoft's Office of Legal Compliance immediately. 
+
+Report an Unfair Competition Complaint 
+If you identify an unfair competition complaint, let 
+the customer know that you can assist with support 
+issues, but will need refer the customer to the 
+Microsoft's Office of Legal Compliance (OLC). 
+Microsoft's OLC handles concerns about whether 
+Microsoft is following its Standards of Business 
+Conduct which includes complying with competition 
+laws. 
+Microsoft's OLC DOES NOT handle customer 
+concerns about refunds, technical issues, warranties, 
+commercial complaints, or other general complaints. 
+For scripting guidance and up-do-date Microsoft's 
+OLC contact links, please refer to KB 3153213 
+Assisting customers wanting to report concerns of 
+inteqritv, antitrust and fair competition. 
+
+
+
+
+
+
+
+Recognizing GDPR Scenarios 
+Microsoft 
+Let's start with the first objective—how to identify GDPR scenarios. The General Data Protection Regulation (GDPR) 
+restricts how Microsoft processes a customer's personal data. If a customer asks how Microsoft processes their 
+personal data, their question should alert you that this might be a GDPR scenario. 
+Below are examples of personal data and processing terms that may indicate the customer's request should be 
+handled in compliance with GDPR. 
+Personal Data Keywords :
+• Name/Email Address 
+• Location 
+• Banking Information 
+• Medical Information 
+• Cookies/lP Address 
+• Social Media Posts 
+• Microsoft Account 
+• Passport Unique ID 
+• Cultural Identity 
+
+Processing Terms Keywords 
+• Collecting 
+• Using 
+• Storing 
+• Recording 
+• Sharing 
+• Altering 
+• Retrieving 
+
+GDPR KEYWORDS :
+Data Subject Rights 
+Regulatory 
+Privacy 
+European Union (EU) 
+Personal Data 
+GDPR 
+Pll 
+Legal Action 
+Information Rights 
+Data Protection 
+
+Privacy , personal data , storing
+
+when customer share username and password
+Explain that Microsoft does not want or 
+need this type of information, finish 
+supporting this customer, and then report 
+the incident to aka.ms/dataprotection or 
+email IPGlRTeam@microsoft.com. 
+
