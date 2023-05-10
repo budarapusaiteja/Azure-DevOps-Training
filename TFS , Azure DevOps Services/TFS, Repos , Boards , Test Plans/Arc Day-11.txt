@@ -1,0 +1,93 @@
+
+
+
+Azure DevOps Boards / Repos | Azure Lab Service / DevTest Labs / DevBox.
+
+
+
+
+--> When we have some existing team projects in the process template
+	when we make changes in the process template
+	These changes will not be applicable to existing team projects
+	Only - team projects which are created after making changes in the team project will have the modified changes
+	
+--> When we want to make changes in the existing team projects in a process template
+	Command -
+	witadmin importwitd /collection:CollectionURL /p:project /f:FileName /v
+		when we use /v , it will check workitem type is validated
+		filename we should use location + workitem name(it is available inside the .xml file) (new workitem file).
+	
+	When we re run the same command with same fileds
+		if we make some changes in the same file - they will be updated.
+	
+	When we mistakenly run this command 
+		then we have command to destroy that specific workitem.
+		
+witAdmin:Customize and manage objects for tracking work- TFS | Microsoft Docs
+
+
+In - Azure devops server
+	when a user deletes a workitem - it will be moved to recycle bin - we can restore this.
+	if user permanently deletes in recycle bin then we cant restore it
+
+When we want to open a workitem in excel
+	we need to install TFS excel extension, then we can open workitem in excel.
+	
+When we want to create n number of workitems
+	we can add them in excel (we should not give the id) and publish it.
+	It will connect to the TFS in the backend and make those changes.
+	This is supported - for server and services.
+	For updating the workitems also excel team is very useful.
+	all the workitems are specific to the project   - not project collection.
+	
+When user want to move workitems from one project to another project 
+	it is possible to move one by one or bulk
+	but the no of fields in the workitem should be same in both the projects.
+	
+Migrating workitems from one project to another - there is a tool - we will not support this.
+	however we will give the best effort support.
+
+=> Queries in devops service.
+	Results      |      Editor        |       Charts
+	Users get confuse - using Editor - field , operator , value
+	These queries are specific to the project   - not project collection.
+	When we delete a queries then there is no option to restore.
+
+
+We can move organization from one location to another location
+	but we cannot move project from one org to another org
+	-- some other third part tools are available which support these issues.
+
+
+
+Understand what you can share and cannot share with the customer
+	we cannot share ring , location with customer.
+
+when a customer is uploading the image / file via teams or email
+	tell the customer - that the file / image is blocked
+	Please share in the DTM.
+	Don't share the screenshots / files in teams or email.
+	Do not store the screenshots in download folder - its a matter of privacy.
+	
+	
+	When a user cannot perform operation in boards :
+	Proj settings -> Boards -> Permissions for AccountTraining
+	
+Board - 
+
+Kanban Boards -
+4 States -  New   ,  Active  ,  Complete  ,  Close
+
+
+
+
+
+
+
+
+
+Questions :
+-> When we have used witadmin importwitd and added a new workitem to a specific Project via commandline
+	after that imported in Azure devops service
+	now the new workitem will reflect in that project ?
+
