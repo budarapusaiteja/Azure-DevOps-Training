@@ -1,0 +1,97 @@
+Azure DevOps Server Installation & Configuration 
+
+
+
+Server OS :
+-> TFS Standard (we can install on both the server os and client os)
+	and we can use all the featuers
+
+Client OS :
+-> TFS Express : source control, version 
+	TFS Express can be installed along with SQL express.
+-> TFS Standard - supports limited featuers
+	Version control, Work item , Build agent.
+-> TFS Proxy Server
+
+
+
+For all the Azure DevOps and previos TFS servers :
+Upgrade lifecycle
+-> 5years is the main stream supports
+	we will give all the support all the bug fixes
+=> After 5 years - it is the best one
+	if the customer want to fix a bug, then we recommend to use new versions
+-> right now 2010,2012 are out of support, some other servers are under extended service
+
+
+
+Work group   vs   Domain 
+Windows properties -> workgroup (with in a machine)
+Domain :	workgroup resource access is restricted to theat machine
+Azure active directory -> Domain controler -> controlling machines.
+Domain - group of devices connected to a AAD azure active directory
+
+
+
+Data tier    vs     Application tier
+Data tier :
+-> SQL 
+Application tier :
+-> TFS installed and infra
+-> Website
+-> DBs SQL
+-> Windows Service
+-> OS Services
+
+
+User Account :
+-> Installation account
+Service Account :
+-> to host a website , we need a service account.
+-> Account using to run a service
+For 
+IIS -> Add user to Local Admin
+SQL -> (for installation and configuration of tfs server , we need to have local admin user with sysadmin privilages) 
+
+
+
+When dealing with TFS tickets :
+1. first check the TFS / Azure Server and SQL supported versions.
+2. Its is good to capture the environment
+	single server or multiple  server
+	reporting server
+
+
+
+1. Download Visual Studio Team Foundation Server 2015 Update 3
+Download the ISO file from the browser.
+2. Configuration
+Full Server Configuration wizard
+SQL Server instance :
+Server Database label : 
+Account : Use a system account : NT authority\network service
+	Authentication : NTLM
+Reporting service
+	report reader account
+-- Ater this configuration is completed, then under databases(management studio), tfs_Configure is created
+	Connect database :
+	Server : Analysis server
+	Server name : .
+-- After this configuration is completed, then under sites team foundation server (in IIS)
+-- in services it will create tfs background agent.
+
+
+
+
+
+
+
+
+Mtfs 14.0 -> Tools
+tfsmgmt.exe : using this we will administer the access
+tfsconfig.exe 
+tfsservice control
+tfsbackup
+-- If the exe's have corrupted, then we can directly copy the exe of same version.
+
+
