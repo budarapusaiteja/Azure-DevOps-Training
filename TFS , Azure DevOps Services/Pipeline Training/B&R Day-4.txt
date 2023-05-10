@@ -1,0 +1,188 @@
+Day -4
+
+
+1) Visual Studio IDE 
+- Create .NET Project  (console application , web application)
+- Build & publish 
+- Add Nuget Dependencies 
+- Use PowerShe11 to build the project using MSBui1d 
+- Perform above steps for .NET Core project (Use dotnet.exe instead of MSBui1d) 
+For navigating to project location - right click on project - open floder in file explorer.
+To check project framework, application type - right click on project - go to properties.
+Application type : Windows Forms Application , Class Library , (we will use this)Console Applcation , Windows Service , Web Control Library
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Project Folder Structure:
+project name - 
+	bin
+	My Project
+	obj
+	project name.vbproj
+	project name.vbproj.user
+	packages.config
+	web.config
+	web.Debug.config
+	web.Release.config
+packages -
+project name.sln //to check How many CS projects has been configured.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+How to create new .net projects using Visual studio
+in Templates :
+	C# Console Application - for .net core projects
+	VB Console Application - for Visual Base projects.
+Target Framework	
+	.NET core 3.1 (Long-term support)
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+dotnet core project folder structure :
+projectname
+	bin
+		Debug	
+			netcoreapp3.1 
+				projectname.exe(since we build in debug configuration, exe file is in debug folder 
+					if we use release configuration then it will be in release folder.
+				
+		Release	
+			netcoreapp3.1 (contains .deps.json , .dll , .exe , .pdb , .runtimeconfig.dev.json , runtimeconfig.json)
+				Publish (contains .deps.json , .dll , .exe , .pdb , .runtimeconfig.json) //.runtimeconfig.dev.json not required for deployment
+					wwwroot(appears in web projects)
+					projectname.exe
+				projectname.exe
+	obj	
+	projectname.csproj
+	program.cs
+	properties
+		PublishProfiles
+			FolderProfile.pubxml(contains which configuration you are building it and what is the published directory)
+--To check the project output, form the .exe file location open the command prompt
+--type (./projectname.exe) and run- Hello World!
+Publish :
+	There are many ways to publish - eg: Azure , Docker container Registry , Folder , 
+	
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+When we want to build the project in command line - we have MSBUILD
+
+using publishprofile: 
+& 'C: \Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBui1d\Current\Bin\MSBui1d.exe' C:\Users\vstsadmin\source\repos\dotnetprojectweb
+\dotnetprojectweb\dotnetprojectweb.csproj /t:clean,build /p:Dep1oyOnBui1d=true /p:PublishProfile=FolderProfileI 
+-------------------------------------
+
+direct publishurl : (filesystem) //we are giving the output folder, where to deploy.
+& 'C: \Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBui1d\Current\Bin\MSBui1d.exe' C:\Users\vstsadmin\source\repos
+\webApplication1\webApplication1.csproj /t:clean,build /p:Dep1oyOnBui1d=true /p:Publishurl=C:\Users\vstsadmin\Desktop\testoutput
+--------------------------------------------
+
+Using package : (zip file)
+& 'C: \Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBui1d\Current\Bin\MSBui1d.exe' C:\Users\vstsadmin\source\repos
+\webApplication1\webApplication1.csproj /t:clean,build /p:Configuration=release /p:platform="any cpu" /p:Dep1oyOnBui1d=true /p:WebPublishMethod=Package
+-------------------------------
+msdeploy: 
+
+-------------------------------
+Deployment: 
+
+--------------------------------
+local IIS 
+Azure Cloud 
+(types of method) 
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+-> When the customer say it is working fine in my Visual Studio ID, 
+   so you generate the verbosity logging with the detailed diagnostics and Collect it.
+		So that we can see what exactly is happening in the logs, which Ms build has been taken.
+		Where is the Park Community DL has been used so this information we can get it
+		
+How to enable verbosity in Visual studio :
+Tools -> Options -> Projects and solutions -> Build and run -> 
+	MSBuild project build output verbosity : ( Quiet , Minimal(default) , Normal , Detailed , Diagnostic) 
+		Detailed or Diagnostic
+		
+		
+-------------------------------------------------------------------------------------------------------------------------------------------
+Obtaining build logs with msbuild
+	https://learn.microsoft.com/en-us/visualstudio/msbuild/obtaining-build-logs-with-msbuild?view=vs-2022
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+2) NodeJS Application 
+- Install NodeJS and update environment variable. 
+- Build & run Sample project using npm. 
+
+3) Java Application 
+- Install JDK, Ant & Maven and Apache 
+- Build Sample project using both Ant & Maven and deploy yo Apache Tomcat Server.
+
+=========================================================================================================================================
+
+Integration connecting Visual studio IDE with the Azure DevOps
+
+https://dev.azure.com
+Project -> Reops -> Import a repository -> https://github.com/kliakos/sparkjava-war-example
+
+https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview
+
+We have to use this team explorer widget to connect to Azure DevOps server
+Visual studio -> View -> Team explorer -> Manage Connections -> Add an Account -> Select the project repo under the desired organization.
+now the total repo will be cloned to the local visual studio IDE
+
+When we make change in the code.
+- In Solution Explorer in the right down, red color tick mark is available
+- In Git Changes, you can see the changes made files, and we can commit All at a time and can push them.
+
+When a Customer is unable to connect Visual Studio to Azure DevOps
+Control Panel -> Credential manager -> Windows Credentials -> Generic Credentials -> remove the git credentials.
+and in Visual Studio IDE top right click on user -> All Accounts -> remove user.
+another way : elete some caches in the Visual Studio Installation Directory
+
+========================================================================================================================
+-- We can use mingw for using linux commands in git
+
+
+By using Git :
+
+git config --global --user.name "Elayaraja R"
+git config --global --user.email Elar@microsoft.com
+
+Clone :
+There are two ways. 
+	You can clone the code one is using the HTTPS 
+	the other one using the SSH OK
+	
+1. Using https :
+-> git clone https://elar123@dev.azure.com/elar1234/Training/-git/jpetstore-6
+url form dev.azure.com -> git repo -> add repo 
+
+When a cutomer is unable to clone the git repo in the local
+Control Panel -> Credential manager -> Windows Credentials -> Generic Credentials -> remove the git credentials.
+	The reason may be forget to update git credentials 
+	or try to add to a different account with previous credentials.
+
+make some changes in code
+-> git status
+-> git add .
+-> git status
+-> git commit -am "modified in git bash"
+-> git push origin master
+-> git checkout -b branch1 (if branch is not available , it will create new branch)
+-> git checkout dev1branch (to switch to dev1branch branch)
+
+2. Using SSH
+-> ssh-keygen
+	it will create id_rsa ; id_rsa.pub
+copy the id_rsa.pub public key text
+dev.azure -> user settings -> ssh public keys -> add new key
+	name : ELAR-PC
+	Public key Data : paste the text.
+-> git clone git@ssh.dev.azure.com:v3/elar1234/Training/jpetstore-6
+ssh url form dev.azure.com -> git repo -> add repo  
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Q&A
+1. Customer with correct git credentials and url , Unable to clone and push
+	we need to collect more logs from the git:
+-> GIT_TRACE=1 git clone url    //to get more logs from the git
+-> GIT_TRACE_PACKET=true git clone url    //to get more logs from the git
