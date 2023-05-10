@@ -1,0 +1,155 @@
+Day-5 :
+
+Azure Pipelines :
+1. Classic Pipeline
+2. YAML Pipeline
+
+Classic Pipeline :
+=> Use the classic editor
+-> Select a source : Azure Repos Git , TFVC , Github , Github Enterprise Server, Subversion , Bitbucket Cloud , Other Git
+-> Team Project : 
+-> Repository :
+-> Default branch for manual and schedule builds : master , release
+=> Select a template: Empty job or select template
+For empty job , we need to add tasks in the next step
+For templates , tasks are pre added.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Select ASP.NET Build and test an ASP.NET web application.
+	--Get sources :   Clean , Clean options
+	--Tasks added :
+	Use NuGet 4.4.4
+	NuGet restore
+	Build solution
+	Test Assemblies
+	Publish symbols path
+	Publish Artifact
+
+Submodules :
+	If if there is a huge repository huge repository and 
+	if you would like to distribute them as a single different project right 
+	there is an option in git where the other git project can be a submodule to this, the parent git project.
+
+-> pipeline is divided into jobs(Build,Test,deploy) each job will have its own tasks.
+-> Tasks are actually orchestrating your build automation.
+-> creating the job you have two types in the build pipeline. You have an agent job. You also have an agent less job
+-> If it is a agent job. Then you will have to have the agent selected
+-> if it is agent less job. You don't need a agent
+-> if you would like to call any rest API or if you would like to do any HTTP request to Azure DevOps or HTTP request to the any other applications.
+	Where you don't need a agent
+	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Variables :
+we have two types of variable linking here. 
+1. One is the pipeline variables
+	which is stick to this particular pipeline only and 
+2. we also have the Variable groups
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Triggers :
+
+1. Enable continuous integration     
+Batch changes while a build is in progress
+Branch filters :
+Type (include)              Branch Specification (dev master searchcities test)
+Path filter :
+
+2. Scheduled :
+When to build - weeks - mon tue wed thu fri sat sun
+select time         time zone
+Branch filters :
+Type        Branch specification
+
+3. Build completion :
+Triggering build :
+Branch filters :
+Type        Branch specification
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Options :
+	Build properties
+		Description
+		Build number format
+		The new build request is processing
+		Automatically link new work in this build Enabled.
+		
+
+History :
+
+Save & queue .
+
+Now the pipeline is created 
+
+Run Pipeline :
+	Agent pool : Azure Pipelines
+	Agent Specification : windows-latest
+	Branch/tag : master
+	Advanced options :
+		Variables
+		Demands
+	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Variable Groups :
+When we need the selected variables in all the pipelines then we will add these variables in Variable groups.
+Pipeline -> Library -> Variable groups  | Secure files
+
+Variable groups :
+Variable group name 
+Description
+Variable
+	Name : system.debug
+	Value : true
+	Name : Agent.diagnostic
+	Value : true
+	Name : BuildPlatfoem
+	Value : any cpu
+	Name : BuildConfiguration
+	Value : release
+-- What ever we update in the variable group, then it will be applied to all the pipelines
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task group :
+
+In Pipeline -> select some required tasks -> right click
+Create task group - 
+	category : Build, Deploy , Package , Utility , Test.
+	parameters :
+	BuildConfiguration
+	BuildPlatfoem 
+	symbolPath
+these parameters and values used for those tasks
+
+
+-- Now while creating new Pipeline , we can directly add this task group, insted of adding individual tasks.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Q&A :
+
+=> if The customer say in my local it is working fine and in the pipeline, It is not working fine. 
+MSBuild arguments :
+We will download the logs from the pipeline and we will also download the logs from the Visual Studio and 
+we will check the arguments, which has been passed to the MSBuild and observed that 
+these arguments also has been used. So why can't we enable those arguments as part of our build pipeline.
+
+=> if The customer say it is not working in locally
+Then check the Build solutio pipeline out
+and copy those commands - blue colour - 'c:  ' and 
+use this command and run them locally.
+
+How to ask customer for Azure pipeline logs.
+=> ask customer to click on the Azure pipeline build number.
+And in the right top corner if you click on the context menu. 
+You have option to download logs.
+
+In cas
+In logs - to get  more information : debug logs
+Open pipeline -> Queue -> Run Pipeline -> Enable System diagnostics
+or
+Pipeline -> Variables -> Agent.diagnostic ; system.debug : true
+
+
