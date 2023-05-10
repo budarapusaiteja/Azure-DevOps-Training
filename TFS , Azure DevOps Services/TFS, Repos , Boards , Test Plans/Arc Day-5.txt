@@ -1,0 +1,110 @@
+
+
+
+
+
+In Microsoft SQL Server Management studio
+for trouble shooting Azure devops server :
+-> tfs_configuration : heart of Azure devops server 
+	(all the connection info and other(reporting database, collection connection info) databases info)
+-> tfs_training : all the data (pipelines, test cases)
+-> tfs_warehouse : 
+
+
+configuration database -> properties -> general 
+	Collation : SQL_Latin1_General_CP1_CI_AS
+	--we only support this collation in azure devops server.
+
+configuration database -> properties -> Options
+	Recovery model : Full
+	if it is set to other settings, while recovering we may not recover the database fully
+	Compatability level : SQL Server 2016 (130)
+
+configuration database -> Extended properties ->
+	--what type of version
+	TFS_PRODUCT_VERSION should be equal to Az dev Server administration console -> Application tier - version
+
+training database -> extended properties-> 
+	TFS_PRODUCT_VERSION should be equal to Az dev Server administration console -> Application tier - version
+
+
+According to database tables , we have some important tables showing configuration details:
+-> dbo.tbl_ServiceHost : it has the information about our collection databases
+	HostID (collection database) -> ParentHostId(host machine) (connection between collection and machine)
+-> tbl_Database : has collection database details
+	Connection String , Database name , (where your databases are)
+-> tbl_identity : all the users who are part of tfs server.
+	we dont reccomend modifications on this table
+
+Team foundation server Background job agent
+-- job agent is neccessary for job running , even services require job agent.
+eg : ad sync job - for synchornizing users to active directory
+	if sync fails , users cannot access server
+
+
+
+while creating new collection , how can we select another instance.
+SQL Server instnce
+
+
+
+
+
+
+
+UPGRADE :
+''''''
+
+Prerequisites :
+1. Upgrade path exists or not.
+2. Permissions, service accounts.
+3. Down time - test upgrade , prod
+4. Compatibility - SQL , OS
+5. Prepare upsh
+6. Backup of SQL
+release life cycle of azure devops server and service
+Methodolgy of release cycle has changed from  2018.
+	reason : Agile, CICD
+previously in Visual studio we have
+	-Service pack
+	-Hot fixes
+Frequency of new releases : previosly quarterly , now 3 times per year..
+
+
+UPGRADE :
+
+For 2019 :
+launch from ISO uninstall ADOs
+- Copies binaries
+- Applies the features
+
+
+1. Upgrade path exists or not.
+i) Inplace upgrade
+	- 2019 vm -> 2022
+	- OS         -^
+	- SQL        -^
+
+ii) Migration upgrade
+	- new VM and install required soft, and restore DB
+	
+iii) Collection upgrade
+	in Administration console,
+	- detatch a collection and move to different tfs server and attach collection
+		if attach collection is in lower version , then the collection is upgraded.
+		if the destination server has higher level versions then , it will upgrade automatically
+	there are advantages and disadvantages using collection upgrade.
+
+
+upgrade from 2019 to 2022
+=> Download the Azure devops 2022 and install
+	it will unistall the 2019 in the background.
+
+
+	
+	
+
+
+
+
+
