@@ -1,0 +1,36 @@
+
+
+dot net core projects :
+.net core
+1. take aspnetcore SmartHotel360 project from  demo generator 
+2. Lets verify the pipeline  (it has two projects, that's why two jobs are awailable)
+	pipeline has two jobs
+		Build Website
+			USe .net core dsk 2.1.403
+			Restore
+			Build
+			Publish
+			Publish artifact - website package
+			publish artifact - arm template
+		Build Pet Checker Functions App
+			Use NuGet 4.4.1
+			NuGet restore
+			Build solution Source/SmartHotel360.Website
+			Publish Artifact Function-app
+	//only change we need to make is - Agent Specification = Windows-2019 or windows latest
+	//previous versions are deprecated by azure devops
+
+-> Every task has its own versions - better to use the latest version.
+	each vesion may have different options , features to set.
+
+
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/process/phases?view=azure-devops&tabs=classic#agentless-tasks
+Agentless jobs supported tasks :
+-> Delay task
+-> Invoke Azure Function task
+-> Invoke REST API task
+-> Manual Validation task
+-> Publish to Azure Service bus task
+-> Query Azure monitor alerts task
+->  Query work items task.
