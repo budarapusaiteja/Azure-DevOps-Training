@@ -1,0 +1,239 @@
+			AGENDA
+
+SQL installation --SQL management studio
+Understand different SQL features ?
+How to install with named instance :
+what is collation : region
+SQL Services - how to manage them / changing service account / stop , restart service ?
+SQL ports.
+How to find which port SQL is running on / how to change ?
+SQL login (windows and SQL login) - different in both / how to change / how to manage ?
+SQL security (Server Roles/Database roles).
+SQL backups (3 types of backup) How to take different backups ?
+SQL Restore (How to restore different backups).
+Database rename.
+SQL SSRS & SSAS
+
+Database properties - size / available size / size limit / growth policy
+Tasks :
+1. Install 2016 named and default instance on same server.
+2. create a Dummy DB on SQL.
+3. Take backup and restore it on the other instance.
+4. SQL always on - SQL Cluster - SQL mirroring.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+-> For Azure devOps we need to install SQL , no other database
+	When a customer wants to install some other database - it's not possible
+
+
+New Hire Readiness - SQL server basic
+
+
+
+SQL Server Installation Center :
+-> Planning
+-> Installation
+	New SQL Server stand-alone installation or add features to an existing installtion.
+-> Maintenance
+-> Tools
+
+
+
+
+SQL Server 2016 Setup :
+Product key
+License Terms
+Global Rules
+Product Updates
+Install Setup FIles
+Install Rules
+Feature Selection (important)
+	Database Engine Services (to host our database)
+		Full-Text and Semantic Extractions for Search.
+	Analysis Services 
+	Reporting Services -Native (later we can add widget installations)
+	--Remaining are optional
+Feature Rules
+Instance Configuration
+	Default instace
+	Named instace  (customised name)
+	--You can have multiple named instaces
+Server Configration
+	When SQL installation completes it creates some service Accounts
+		SQL Server Agent
+		SQL Server Database Engine
+		SQL Server Analysis Services
+		SQL Full-Text Filter Demon Launcher
+		SQL Server Browser
+		--Any time we can change these accounts.
+		Collation : (to change support languages) //mostly we go with the default
+			Database Engine (OLTP)
+			Analysis Services (OLAP)
+Database Engine Configration
+	Server Configration :
+		Windows authentication mode //we always go with this.
+			Add Current User (for both Database Engine Configuration and Analysis Services Configuration)
+			Advance -> 
+			if you don't add current user, you cannot login
+			We can add multiple users - all the users in the AAD users.
+		Mixed Mode (SQL Server authentication and Windows authentication)
+	Data Directiories
+		
+	TempDB
+	
+	FILESTREAM
+Analysis Services Configration
+Reporting Services Configration
+	
+Feature Configration Rules
+	Select Install only
+Ready to install
+Installation Progress
+Complete
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+OLTP - Online Transaction Processing
+	user registration
+		Named
+		No
+		Address
+		email
+	Structured data
+	Relational Schema - Normalized (unique)   |  non-normalized (redundent)
+OLAP - Online Analytical Processing
+	Mostly related to 
+	Analysis algorithm on OLTP data
+	Data analytics
+	Data mining , Extraction techniques.
+	Unstructured data
+
+-> Online relational Schema - it is a structured data
+-> SA (sql account)
+	 with this account we can login to sql server.
+
+------------------------------------------------------------------------------------------------------------------
+
+-> Service Account             |              User Account
+if AAD admin add Login as Service to a user account , then the account will become Service account.
+if AAD admin add Login as user(allow logon locally), then account will become User account
+Service Account never expires
+User Account - we can set limit for 30 days or 90 days to expire user password.
+	we can set group(users) policy for password expiry
+we can use user account as a Service account
+
+------------------------------------------------------------------------------------------------------------------
+After Installation :
+
+Program files -> SQL Server -> SQL 2016 Server Managemant Studio
+	SSMS-Setup-ENU
+
+run -> services.msu
+
+To update Service account passwords :
+	SQL Server 2016 Configration Manager(Local)
+	
+
+Database :
+Mirroring : exact copy of data
+	pull
+	push
+	typically used for disaster recovery management
+	At a time we cannot work on two databases
+Replicating : from primary to secondary
+	pull
+	push :push changes 
+	app can use both the databases, parallell we can update in both the databases.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+SQL server
+Databases
+Security
+Server Objects
+Replication
+PolyBase
+AlwaysOn High A
+Managemant
+Integration services
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Backups :
+	Full -every day specific time eg :every day 11 pm
+	Differntial - for every time limit eg: 30 mins , 60 mins
+	Transactional - 
+	
+=========================================================================================================================
+
+SQL Server 2016
+Reporting Services Configuration Manager :
+
+Service Account
+Web Service URL (used by the API's)
+Database
+	create a new report server database. -empty database
+		current user - Intergrated sercurity.
+		Database Name - ReportServer
+		Temp Database Name - ReportServerTemp
+		Authentication Type - Service credentials / WIndows credentials
+	choose an existing report server database. - with previous data.
+Web Portal URL 
+Email Settings
+Execution Account
+Encryption Keys
+Subscription Settings
+Scale-out Deployment
+Power BI Integration
+
+
+IIS will go through HTTP.SYS and come from HTTP.SYS
+HTTP:SYS is the core component of windows , it is inbuilt available 
+WebService URL - Web root directory
+Report Manager URL - UI reports.
+
+------------------------------------------------------------------------------------------------
+
+Configure SSRS 
+	- Reporting services
+	- SajanReportServer
+	- SaranServertempdb
+	- Configure Web URLS
+	- Create a Datasource pointing to a test database in SQL
+	- Take encryption key backup
+	- Exchange the database.
+
+
+
+
+
+run:
+mstsc -v public_ip_address
+
+
+
+Microsoft SQL Server Managemant Studio with Azure Data Studio.
+-- Setup Completed
+
+
+
+
+
+=======================================================
+
+IIS configuration :
+Open Server Manager 
+manage
+
+Server Roles : Web Server IIS
+Roles Services : monitoring
+
+
+http://localhost/
+win + r = inetmgr  
+internet information services IIS manager
+c: inetpub/
