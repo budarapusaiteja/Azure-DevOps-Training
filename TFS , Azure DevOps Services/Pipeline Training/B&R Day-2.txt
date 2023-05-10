@@ -1,0 +1,29 @@
+Day-2
+
+c++ , java , dot net , dot net core
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.NET core application :
+
+Configurations :
+--debug configuration for developers
+--release configuration for automation
+
+Platform : by default - any CPU
+1. cs project file -
+	CSS project will have which .NET Framework it is using along with the version.
+2. solution file -
+	Visual studio version
+	Project ID, extendsion for project , solution (for all the projects are available)
+	Configurations
+---------------------------------------------------------
+
+Creating Build :
+
+After creating build -
+	location : applicationname/bin/Release/frameworkname
+	in the target configurations folder we can find the build related files(output).
+	if we run applicationname.exe file from this folder , we will get the output.
+	
