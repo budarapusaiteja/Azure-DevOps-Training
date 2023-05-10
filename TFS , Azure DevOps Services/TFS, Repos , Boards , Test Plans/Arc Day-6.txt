@@ -1,0 +1,54 @@
+
+
+When a upgrade fails :
+Troubleshooting 
+1) Go to Management studio -> tools -> SQL Server Profiler 
+filter the database and select the required database and re run the upgrade , then the traces will be captured.
+
+2)tfs_configuration -> programmability -> stored procedure
+prc_QueryWhatsRunning
+
+
+--> In azure devops we dont support mirroring or replication.
+-->can we roll back any one database, no it wont work, we can rollback all the databases.
+
+
+
+
+Migration based upgraded:
+ADS 2019 -> 2022
+ADS 2019
+- Take the backup of all the Tfs databases
+	TFs_configuration
+	Tfs_Collection
+	Tfs_Warehouse (optional) (not required for 2022) SSRS & SSAS Dbs are also not required
+On ADS 2022 - on a different VM
+- Restore the databases in SQL(supported)
+- Install the software ADS 2022
+- Configuration centre -> Existing deployment -> Production upgrade and complete the upgrade
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+https://learn.microsoft.com/en-us/azure/devops/server/download/azuredevopsserver?view=azure-devops
+--> we can restore the 2019 SQL Server backup databases in the 2022 SQL Server.
+
+
+
+Collection upgrade:
+ADS 2019 -> 2022
+ADS 2019
+- Ensure you have backup of all Dbs (safe side)
+- From Admin console -> Team project collections -> Detach collection
+- Take a backup of detached collection (collection Name A)
+ADS2022
+- Ensure it is configured with configuration db
+- copy in the new server
+- Restore the detached only collection backup (collection Name A)
+- IN new Azure devops Admin console -> Team project collections -> Attach collection 
+	select the copied database
+
+
+
+
+
+Operationl managers devops :
+-> Arun Yadav
+-> Tabrez Shaikh
