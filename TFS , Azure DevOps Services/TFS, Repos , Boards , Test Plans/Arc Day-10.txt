@@ -1,0 +1,82 @@
+
+
+Azure DevOps Boards / Repos | Azure Lab Service / DevTest Labs / DevBox.
+
+1. Team Project -> folders in Process Template
+	-> Menus
+	-> Groups & Permissions will be set
+	-> all the team project creating templates come from these folders.
+	
+Creating Team Project 
+	from Visusl studio
+		the target version of TFS must match with VS version
+		eg : TFS 2015 = VS 2015
+		
+	from web
+		introduced from 2017
+
+
+
+Two ways :
+1. Process - Inheritance
+	you can't customize at a parent level
+	to 
+	-- We can switch process of the team projects in Inheritance
+		eg : Inheritance-1 has tp1 and tp2    || Inheritance-2 has tpa and tpb
+		we can switch the process of tpa to tp1.  (now tpa link with inheritance-1)
+2. Process template - XML | HOst   
+	Build
+	Classification
+	Groups and Permissions
+	Lab
+	Report
+	Test Management
+	Version control
+	Wotkitem Tracking
+		LInk Types
+		TypeDefinitions -(the xml file which has the default options is the definition)
+	ProcessTemplate.xml
+	
+When we create a new workitem in a organization - the id is incremental for all workitem through out organization
+
+In xml files - There are two types of fields
+	System - system.         eg : title , created by(automatically pickey by fields)
+	User defined - Microsoft.    ;     end user created
+	
+=> When you go to Org settings in ADO dev.azure.com
+	under Boards -> Process -> if you see Process Templates and import process option
+	-When tfs to Dev.azure migration happens , you can see these options.
+	
+How to customize these Process templates in dev.azure -> click on ... and export.
+
+Visual studio -> Process template editor extension
+	with this we can get the option to edit process template in VS -> tools -> Process editor.
+	
+Team -> Team project collection settings -> process template manager -> select a process template -> download
+	this is same as the export option in the dev.azure
+
+
+
+When we want to make some changes to xml - export it - make some changes - 	import it.
+1. download the team project 
+2. edit the xml file - some name and guild
+3. change the folder name and zip it
+4. now import this folder from dev.azure org settings boards process.
+
+
+When we cannot see some zip files , whil importing - this is VS cache issue
+	disconnect the server and connect
+error : "Project creation Plugins" could not be connected
+	we will get this error - when we try to connect a 2019 vs process template to vs 2015
+	
+
+Workitems are different based  on the project type.
+In CMMI requirement is all.
+In Agile requirement is User story
+In Scrum requirement is product backlog items	
+	
+1. Took a copy of task.xml
+2. Renamed WorkitemType tag and WorkitemtypeRefname
+3. Adding the field Remarks under <FIELDS> section
+4. Added Remarks to the <FORM>
+5. Add remarks field reference under <WEBlayout>
