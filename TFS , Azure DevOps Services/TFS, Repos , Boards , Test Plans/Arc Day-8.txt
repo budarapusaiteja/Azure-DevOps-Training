@@ -1,0 +1,49 @@
+
+
+Reporting is a optional feature in Azure DevOPs.
+This is report -> In Azure DevOps Server Administration Console
+in 2022 Azure DevOps Server report is not available.
+
+-> While creating a workitem , we can define it will go to reporting or not.
+
+SQL Server Reporting Services
+-> It is for the project manager to check the status of the project.
+	only of the monitoring, we cannot perform anything from here
+
+
+Go to SQL Management studiod
+-> connect to analysis services , check collection analysis DB
+-> check , collection warehouse DB
+
+
+go to the url : localhost/TeamFoundation/Administration/v3.0/WarehouseControlService.asmx
+check - getProcessingStatus  - xml file  
+in this we can check , the job is started or not (job status)
+	Warehouse
+	Full Analysis DB -(it will pull all the data)
+	Incremental Analysis DB -(it will  pull only the new data)
+
+
+-> Reports come from warehouse and analysis
+Q - when we cannot see any data in the reporting server url : then we need to re run the job and refresh this xml page
+=> when we make some changes in the reports / when we run a job again,
+	then in this xml file the last run should be update (refresh)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
