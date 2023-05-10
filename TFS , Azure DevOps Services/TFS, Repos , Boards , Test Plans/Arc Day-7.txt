@@ -1,0 +1,182 @@
+
+
+
+TFSconfig commands :
+https://learn.microsoft.com/en-us/azure/devops/server/command-line/tfsconfig-cmd?view=azure-devops-2022
+
+Task :
+Collection command - 
+try attaching and detatching collection using the command :
+-- check the status bar , collection bar , read the log .
+
+
+
+
+
+
+
+
+connectivity issues : we need to find , where it is failing.
+-> Only by capturing the logs, we can find where it is failing.
+-> Permissions of user and TFS.
+
+Database growth issues :
+-> My collection database is increase to 100gb in 1 day. How to trouble shoot
+	share TSG for DB growth.
+	https://supportability.visualstudio.com/Developer/_wiki/wikis/Developer/775026/TFS-ADO-OnPrem-Database-Growth-Troubleshooting
+	what how to collect from the DB. a,b,c,d are important in collecting capture data
+	troubleshooting, analysing the captured the data.
+-> happens due to 
+	Pipeline retentions
+	Test runs retentions
+	Job failures
+	data deleted but not cleaned-up
+-> cleanup jobs - will delete the data 
+(how retention work is, it will mark as delete)
+The data marked as delte will delete permenantly
+but These clean up jobs will delete only small chunks , at a time
+
+-> we dont delete the data, we need TG's approval for deleting
+-> if a customer deletes the data, then thats the end of the support for the customer.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Liscenses -> users -> subscription
+purchasing cals.
+first 5 users are free in azure devops server also
+
+go through the documents.
+
+to buy, azure devops server - go to resellers and buy azure devops server
+the benifits, we get with the visual studio subscription is same for Azure devops services and Azure devops server.
+	free user 
+Azure devops Server Liscensing validation, we dont have any method. 
+
+Do we have auditing for Azure DevOps Server ? -NO
+	only available in Azure Devops Services
+Do we have analytics for Azure Devops Server ? -YES
+	previously available in Azure Devops Services
+
+ACCESS level:
+-> We can check the access level from the web portal
+	cant from the Administration console.
+
+http://csvtfs2016:8080/tfs/Training/ : Azure DevOps portal
+Access level settings :
+Export audit logs
+	Stakeholder
+	Basic
+	Basic+Test Plans
+	VS Enterprise
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+IN logs :
+Serch for - Error , Exception , Failed
+
+Https : 200, 403, 404, 500, 503
+
+Networking team, SQL team.
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+--> Romit Gulati
+
+
+
+
+
+tfs backup
+move , clone
+	hardware move
+	domain move
+notification troubleshooting
+
+
+
+Azure DevOps Server Administration Console -> Scheduled Backups -> create scheduled backup
+	Details
+	Alerts
+	Schedules
+		Nightly Full Backups
+		Manual Backups only
+		Custom Scheduled : full backup - on sunday 2'am
+		Differnetial Backup Schedule : (from last full backup to set time) : every day 2'am
+			when we want till wednesday - sunday full backup + directly take wednesday backup
+		Transactional Log Backup Interval : 15 mins; 
+			when we want backup of sunday 3'am : sunday full backup till 2'am + till 2'15 transactional + till 2'30 transactional + till 2'45 transactional + till 3 transactional
+	Review
+		Retention Days - 30
+	Readiness Checks
+if we will take schedule backup in tfs, it will automatically take mark backup also.
+	it will make sure that all the database we have to be in sink (configuration database, all collection databases)
+	
+
+
+If the customer wants , backup of every month -they can do it manually, not possible through the app.
+If any changes (backup) made in the tfs will be stored here.
+Management studio -
+config database -> tfs_registryitems  - it contains backup files
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+our vms are in the work group account that is why in Application tire - 
+	its showing local account
+	
+since romit is using domain account it is showing Network service account.
+=> network service account - account name ending with $ symbol.
+	for automatic backups this network service account will take care
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Management studio -> properties -> files
+	.mdf
+	.ldf (transactional data)
+Management studio ->properties -> Recovery model :
+	Full (using ldf file we can get the full backup back.) (for sql always on)
+	Bulk- logged (captures bulk login info)
+	Sample (during upgrade we will change to simple(data store in mdf file), after it will set back  to full)
+	
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+	
+Permissions issues :
+go to the bak file in the file explorer. (sql backup or tfs backups)
+	open properties -> Security - check users
+	
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Azure DevOps server -> Serarch -> configure Installed Features
+	Use an existing search service
+	specify user and password to enable basic authentication in search service
+		user
+		password
+	
+
+
+Azure DevOps Server Extensions :
+Azur Boards 
+	Delivery plans
+	nexus IQ for Azure 
+	Work Item Search
+	Wiki Search
+Azure pipelines
+	nexus iQ
+Azure 
+	code search
+	
+	
+	
+	
+	
+	
+command :
+c:\Program Files\Azure DevOps Server 2022\Tools>TfsServiceControl.exe quiesce
+
+.\elasticsearch-
