@@ -1,0 +1,631 @@
+
+
+What Is a Premier Support Offering? 
+Premier Support is an end-to-end support solution that helps customers accelerate the value of their on-premises, 
+hybrid, and cloud-based software investments. It offers services to all organizations irrespective of the size, location, 
+and industry. 
+Premier Support helps our customers maximize their performance by offering rich, flexible, and agile support 
+experiences aligned specifically to their goals and outcomes. 
+Premier Support delivers the following values: 
+1. Reduce costs and risks
+2. Optimize the information technology environment
+3. support for cloud journey 
+4. increase productivity
+
+
+
+
+
+
+Types of Support Offerings 
+1. Premier Support 
+Provides a comprehensive and end-to-end managed support across the entire Microsoft platform. 
+2. Unified Support 
+Offers a new support experience with simplified pricing and as-needed support hours. 
+3. Broad Commercial Support (Professional Support) 
+Caters to the needs of small commercial customers who don't need a completely-managed support experience from Microsoft. 
+
+=> Availability
+Premier Support 
+Available globally to large commercial customers. 
+Unified Support 
+Available globally to large commercial customers. 
+Broad Commercial Support (Professional Support) 
+Available globally to small and medium-sized commercial customers. 
+
+=> Billing
+Premier Support 
+Billed hourly 
+Unified Support 
+No hourly billing and flex allowance based on consumption 
+Broad Commercial Support (Professional Support) 
+Billed per incident 
+
+=> Serverity levels
+Premier Support 
+Four severity levels— 1, A, B, and C. 
+Unified Support 
+Differing severity definitions—Severity 1, A, B, C, and Standard or Critical. 
+Broad Commercial Support (Professional Support) 
+Three severity levels—A, B, and C. 
+
+=> Account Management 
+Premier Support 
+A customer success account manager (CSAM) is assigned to all the Premier Support customers while some 
+customers will also have an incident manager (1M). 
+Unified Support 
+A CSAM and an 1M are assigned to each customer in Advanced Support, Performance Support, and Enterprise 
+Support. A critical situation (CritSit) manager is also assigned to customers for all offerings, except Core Support. 
+Broad Commercial Support (Professional Support) 
+Most customers are unmanaged, but a small percentage may have some account management. 
+
+
+
+
+Premier Support vs. Unified Support 
+PREMIER SUPPORT :
+Technical support (24/7) - Initial response time varies per the severity level of the case. 
+Information technology IT health - Guidance on design, development, deployment, and best practices is provided. 
+Cloud assistance  - No specific offering for Premier Support customers, but they receive Azure Support. 
+Account management - A customer success account manager (CSAM) is assigned. 
+Consumable support hours - Support time is purchased in a one-year contract. Purchase of additional time requires additional approvals. 
+Exclusive educational resources 
+are available. 
+No add-ons available. 
+
+Premier customers Problem resolution services
+• Technical support: Customers receive technical support for twenty-four hours a day, seven days a week, priority in routing, and 
+option to escalate the case to senior support engineers. 
+• Onsite and remote: Customers get help for all the Microsoft products and unlimited Azure "break-fix" support. 
+
+What is your role :
+Coordinate with the technical advisor (TA), CSAM and incident manager (1M) for addressing customers' tickets. 
+Be the single point of contact for the Premier Support customers. 
+Ensure that the customers' tickets are resolved. 
+
+UNIFIED SUPPORT  :
+Technical support (24/7) - Shorter initial response times, but it varies 
+Information technology IT health  - Assessments with setup and configuration services are provided on demand. 
+Cloud assistance - Customers receive a flex allowance based on a percentage of the contract list price. 
+Account management  - A CSAM is assigned. 
+Consumable support hours - The concept of consumable support time does not apply. 
+Technical training - Videos, hands-on labs, learning paths, and expert-led webcasts are available. 
+Proactive services and enhanced solutions 
+Add-ons - can be purchased using flex allowance. 
+
+
+
+
+To provide a seamless customer experience: 
+Handle all the inputs from your extended team properly. 
+Take accountability and own the case from beginning to end. 
+Resolve the ticket quickly with the best possible quality. 
+Ensure that the implementation schedule stays on track. 
+Engage with and manage the right technical support 
+resources and services. Do not disclose all the roles to the customer. 
+
+
+How to work together : Connect support delivery model
+customer -> Technical Adbisors , Supporting engineers , Other customer-aligned support resources
+		-> Product engineers ot technology specialist , Account team : CSAM and IM , other technical support teams
+		
+		
+                  ROLE ORCHESTRATION
+Backup customer success account manager (BAM) 
+Who am l? 
+A backup for a CSAM. 
+What do I do? 
+Assist supporting engineers when the 1M and CSAM are unavailable for extended periods. 
+
+Incident manager (IM) 
+Who am l? 
+A part of the customer account's representative team that focuses on the progression of reactive support cases. 
+What do I do? 
+• Take an overall service perspective and focus on customer's experience. 
+• Work with supporting engineers during the troubleshooting and resolution phases. 
+• Ensure cases continue to progress. 
+
+Customer success account manager (CSAM) 
+Who am l? 
+A Microsoft representative responsible for end-to- end satisfaction of a customer's service relationship. 
+What do I do? 
+• Provide delivery management services. 
+• Maintain a close ongoing relationship with the customer. 
+• Serve as a trusted advisor to the customer and owner of the customer's IT operational health. 
+
+Critical situation (CritSit) manager 
+Who am l? 
+A role within customer service and support (CSS) that takes ownership of the progression of CRITSIT cases. 
+What do I do? 
+• Assist customers and supporting engineers in the progression of CritSit cases. 
+• Act as a CritSit owner depending on how the customer account is set up. 
+
+
+Critical situation (CritSit) owner 
+Who am l? 
+A person who acts as the owner for a customer's critical situation as defined in the CritSit tool. 
+What do I do? 
+• Take ownership of a critical situation. 
+• Understand and document the impact of the issues in the CritSit tool. 
+• Provide reliable responses. 
+• Monitor and manage high priority customer escalation needs. 
+
+When IM and the CSAM are out of office entire week ,  consult the BAM.
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+Manage S500 Customers :
+Closely monitor the queues and respond on priority to S500 cases. 
+
+* Immediately do handovers of S500 Severity A and Severity 1 cases to the S500 queues that are staffed to meet the 15 minutes Service Level Agreements (SLA). 
+* Work on the S500 severities on priority from First Quality Response (FQR) to Last Quality Response (LQR). 
+* Work on S500 on priority and with full agility for the areas where we cover all volumes such as Premier and Broad Commercial, including S500 customers. 
+* Use case buddy to detect S500 cases in the queues. 
+* Commit to achieving FQR for our customers within the promised initial response time that's aligned to case severity. 
+* Be responsive at all phases of the case lifecycle. 
+
+WORKFLOW :
+Assignment - 
+Scoping - Identify the goal of the case ,  DOcument the goal , Send an email to the customer.
+Solution development - troubleshoot , fing solution and suggest customer
+Solution validation - 
+Closure - send LQR and expect closure from customer , tracking customer unresponsive - with 3 follow-ups, spaced across 3 days 
+
+Communicate Effectively with Premier Customers 
+Imagine yourself in your customer's situation. 
+Understand their perspective or opinion. 
+Think of a solution to resolve the issue. 
+
+
+Make the Mind Shift: Put the White Glove On 
+A Premier customer should be treated as an urgent case. 
+Turn all your attention to the Premier customer. 
+Even if the ticket is Severity C, handle it immediately. 
+Disconnect from everything else and focus on the Premier customer's ticket only. 
+
+FQR : https://internal.evergreen.microsoft.com/en-us/topic/a473eecf-e44c-cb95-23d7-fa757d0367cf
+What is it? 
+FQR is a quality expectation standard applied to all support cases during initial response and scoping. 
+Why is it important? 
+Conducting pre-work before contacting the customer ensures that the engineer is prepared to immediately scope and initiate working on the case. 
+What are the actions? 
+• Define the scope clearly. 
+• Advance the issue toward resolution. 
+• Demonstrate empathy. 
+• Communicate in a human, personal way. 
+• Match the customer's sense of urgency. 
+• Minimize transfers before contacting the customer. 
+• Respond within the initial response goal. 
+• Show leadership with the customer by describing our plan to resolve their problem. 
+• Align with the customer on the resolution before proceeding. 
+
+LQR : https://internal.evergreen.microsoft.com/en-us/topic/91cd643b-038a-ebec-a066-0167a588f737
+What is it? 
+LQR is the critical element of case closure. It ensures that all the necessary elements needed to conclude interaction with the customer is complete and leaves the customer with a feeling of resolution. 
+Why is it important? 
+When a case is closed prematurely, the likelihood of low Customer and Partner Experience (CPE) is raised. Additionally, when all the components and steps are included in the process, it lowers the chance that the case will be reopened. 
+What are the actions? 
+• Start the closure process after you receive explicit agreement from the customer. 
+• Follow the unresponsive customer process, when applicable. 
+• Facilitate actions to ensure that all case contacts and stakeholders are aligned on proceeding to case closure. 
+• Send a closure email that includes all required 
+components listed in the email guidelines. 
+• Write a summary of the issue and resolution for future documentation. 
+• Avoid aggressive follow-ups and closing cases on customer holidays and/or weekends. 
+
+Follow Case Management Best Practices :
+Ensure that you have documented the full story of a support request in your case notes. 
+Contact customers proactively to confirm if cases can be closed, before you close those cases. 
+Always keep the case notes updated with the latest research details and status. 
+
+
+Document Case Notes :
+Issue description 
+End goal 
+Infrastructure information or technical details
+Error messages, if any 
+Troubleshooting notes 
+Next steps 
+Next contact date 
+
+Note: 
+• Don't copy-paste chat conversations or emails into the case notes. 
+• Email communication is not considered as case documentation. 
+• Case documentation is important for you, peers, and collaborators. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Handover Process :
+
+Warm handover 
+Eligibility 
+• The case is marked Severity A or B with the 24/7 flag set to Yes in Dynamics for Microsoft (DFM). 
+• The customer is responsive and will be available to work with the next available engineer. 
+• This confirmation of availability must be obtained from the customer and recorded in the case notes. 
+• Mitigation is not yet complete. 
+
+
+Cold handover
+Eligibility 
+• The case is not marked Severity A or higher. 
+• The customer is not available to work with the case owner's next working shift. 
+• The customer has requested to work at a time that is outside of the case owner's working hours. 
+Note: If the customer has not made a handover request, do not handover the case. 
+
+
+Callback or monitoring request 
+Eligibility 
+• When the customer requests for continuous monitoring. 
+• A brief customer callback is required, outside of case owner's working hours, but no further 
+troubleshooting is expected. 
+• The customer requires brief assistance outside the case owner's working hours. 
+
+
+Receiving a handover
+As the engineer receiving a handover, follow these guidelines: 
+• Accept all handovers without pushback. 
+• If there is an issue, accept the handover and contact your technical lead (TL), the SMEs, or the partner technical advisor (PTA) for review. 
+• If the case is titled, "warm handover", immediately contact the previous owner for a proper debrief and to set up a customer introduction. 
+• If the case is titled, "cold handover", take ownership of the task and the case, and proceed to assist the customer. 
+• If the case title contains the term, "callback or monitoring only", take ownership only of the child case, complete the requested actions that the previous engineer has noted, and then close the child case. 
+• Update the internal title in Dynamics for Microsoft (DFM) to remove any references, such as "warm handover" or "cold handover". 
+
+
+
+Transfer of Case Ownership :
+Validate the customer need and their understanding of what it means to work on the case in a different time zone. 
+Continue maintaining support to ensure a better customer experience. 
+
+-> Planned out of office(OOF)
+• Make sure your manager is aware of your OOF time for better workforce management. 
+• Ensure your case notes are complete. 
+• Work with your peers and transfer ownership of critical and active cases. Let the customer know that you will be OOF. 
+• If you are unable to find peers to whom you can transfer your cases, work with your manager on the list of cases. Do not place cases back into queue. 
+• Ensure OOF message is set and includes information on how the customer can get assistance from other team members should their needs change. 
+
+-> Unplanned out of office (OOF)
+• If possible, inform your manager immediately. Especially if there are cases, with commitments, that must be met while 
+you are out. This will help the manager prioritize. 
+• If possible, ensure that you set your OOF message right away and make sure it includes information on how the 
+customer can get assistance from other team members. 
+If you are unable to contact your manager due to any circumstance, your manager and/or the technical advisor (TA) will 
+assign actions to other team members to avoid missing a commitment to the customer. 
+
+-> Unusual shift :
+• Ensure you have a clear understanding and a mutual agreement with the customer on when you will contact them next. 
+• Ensure your customer is fully aware of your work hours or days. Provide information on how the customer can get assistance, 
+from other team members, should their need changes. 
+If the customer cannot wait for your return, determine a method to transfer the case and then initiate the transfer. 
+
+
+==============================================================================================================================================
+
+
+Support engineers may encounter some of these scenarios while working on Premier Support cases.
+			Unresponsive customer :
+Handling Unresponsive Customers: Three-Strike System 
+An attempted contact is where you contact the customer or partner using both email and phone. 
+You should initiate the three-strike system when a customer is unresponsive to attempted contacts. It requires a 
+minimum of three attempted contacts before closing the case. 
+The customer must be permitted at least one business day to respond before initiating the first strike or progressing 
+to the next strike. Note that a business day denotes the customer's workdays or working hours. 
+
+A customer becomes unresponsive -> Strike 1 -> Strike 2 -> Strike 3 -> Case closure
+Strike 1:
+• Contact the customer by phone. If they are unresponsive, leave a voicemail to them, where possible, followed by an email. 
+• Document the strike count as Strike 1 in case logs and update the internal case title. 
+
+Strike 2 :
+• Contact the customer by phone. If they are unresponsive, leave a voicemail, where possible, followed by an email 
+looping the incident manager (IM) and customer success account manager (CSAM). 
+• Document the strike count as Strike 2 in case logs and update the internal case title. 
+• Send an email to the 1M explaining the current delays, reasons for the delays, and the timelines for closing the case. 
+
+Strike 3 :
+• Contact the customer by phone. If they are unresponsive, leave a voicemail, where possible, followed by an email 
+looping the incident manager (IM) and customer success account manager (CSAM). 
+• Wait for an update from the CSAM. 
+• Negotiate the case closure with the CSAM. Don't close the case without the CSAM's approval. 
+
+
+==============================================================================================================================================
+			Critical situation case (CritSit)
+
+What Is CritSit? 
+CritSit is a critical situation and is referred to as CritSit. It is a global process with tools designed to: 
+Allow you to effectively manage Premier Support customer cases that are tagged as Severity A or Severity 1. 
+Assist you in providing a consistent and repeatable support experience. 
+The initial response time, support hours, and account management varies as per the severity level of the incident. 
+
+Severity 1 
+What is the impact on the business? 
+These cases have a catastrophic impact on the customer's business. 
+In these cases, a core business process is entirely lost. 
+Work cannot reasonably continue, and these cases require immediate attention. 
+What does the customer expect? 
+• Regular updates on the progress to leadership 
+• Allocation of appropriate resources to sustain continuous effort on a 24/7 basis 
+• Rapid access and response from change control authority 
+What does Microsoft provide? 
+• Initial call response in an hour or less 
+• A senior resource or a customer engineer at the customer's site as soon as possible, as required 
+• A CritSit manager 
+• Continuous effort on a 24/7 basis 
+• Rapid escalation within Microsoft to product teams 
+• Regular updates on the progress to leadership through the 1M or CSAM 
+ 
+ 
+Severity A :
+What is the impact on the business? 
+These cases have a critical impact on the customer's business. 
+There is a significant loss or degradation of services. 
+They need attention within an hour. 
+What does the customer expect? 
+• Allocation of appropriate resources to sustain continuous effort on a 24/7 basis 
+• Rapid access and response from change control authority 
+• Regular progress and resolution status updates to the leadership 
+What does Microsoft provide? 
+• Initial call response in an hour or less 
+• A senior resource or a customer engineer at the customer's site as soon as possible, as required 
+• A CritSit manager 
+
+Severity B
+What is the impact on the business? 
+These case have a moderate impact on the customer's business. 
+There is a moderate loss or degradation of services, but work can reasonably continue in a compromised manner. 
+These cases need attention within two business hours. 
+What does the customer expect? 
+• Allocation of appropriate 
+resources to align to Microsoft's effort 
+• Access and response from change control authority within four business hours 
+What does Microsoft provide? 
+• Initial call response in two hours or less 
+• Effort during business hours only 
+• Effort on a 24/7 basis upon request, but it's not available in all geographies 
+• Continuous effort on a 24/7 basis 
+• Regular updates on the progress to leadership through the 1M or CSAM 
+
+
+Severity C :
+What is the impact on the business? 
+These cases have the least impact on the customer's business. 
+Work can substantially continue with minor or no obstructions in services. 
+These cases need attention within four business hours. 
+What does the customer expect? 
+• Accurate contact information of the case owner 
+• Response within 24 hours 
+What does Microsoft provide? 
+• Initial call response in four hours or less 
+• Effort during business hours only 
+
+
+
+==============================================================================================================================================
+
+
+What Are Advisory Cases? 
+Advisory services are part of an hourly fee-based support option, which provides proactive support beyond break-fix maintenance needs. 
+
+Advisory support cases should be indicated with the 'Advisory" issue type in the case management system. 
+If a case is created with the wrong issue type, inform the customer that they'll receive help, but the case type must be changed. 
+Premier Support customers will not be charged with the scope time if the customer declines scope. 
+
+Advisory hours to be invested must be agreed with the Premier Support customer or the incident manager (1M) before starting the work. 
+Scoping should confirm if the issue is advisory services or break-fix. 
+
+
+Handling an Advisory Case :
+1. Scope 
+the issue with the customer and determine if the incident type is advisory based on the definitions for advisory services and break-fix issue. 
+2. Ensure 
+that the case is correctly coded as advisory. 
+3. Obtain 
+agreement from the customer on the estimated hours. 
+Check if the case can be resolved within six hours for Unified Support customers. 
+If not: 
+• Notify your team manager and the 1M or support account coordinator (SAC). 
+• Continue working to complete scope. 
+4. Deliver 
+the solution to the customer. 
+• Perform a final check to ensure the correct case type. 
+• Check the time you have spent on the case. 
+• Assess if the case would take longer than six hours. 
+• Notify your team manager and the 1M or support account coordinator (SAC), and continue to complete scope, if longer than six hours. 
+
+
+
+==============================================================================================================================================
+
+		Reopened case
+
+Reopened Cases: Common Scenarios 
+Each reopened case can have different situations and circumstances. The process and the eligibility time to resolve such cases may vary. 
+The process under each situation is a generic procedure that's applicable across different lines of business 
+(LOB). Consult your technical lead (TL) or technical advisor (TA) for premier specifics. 
+
+Unresolved ticket :
+• Trigger: Customer 
+• Eligible time to reopen: Differs in each Support Business Unit (SBU) 
+
+Repeat caller :
+• Trigger: Customer 
+• Eligible time to reopen: Differs in each Support Business Unit (SBU) 
+
+Ticket closed in error :
+• Trigger: Ambassador or engineer 
+• Eligible time to reopen: Differs in each Support Business Unit (SBU) 
+
+Email receieved from a customer:
+• Trigger: Ambassador or engineer 
+• Eligible time to reopen: Differs in each Support Business Unit (SBU) 
+
+Other :
+• Trigger: Ambassador or engineer 
+• Eligible time to reopen: Differs in each Support Business Unit (SBU) 
+
+Guidelines for handling Reopened cases :
+If at any time the customer requests to work with the original ambassador or with someone in their time zone, document the request and transfer the case to the open queue. 
+If you're unable to reach the customer due to time zone differences, check with the original engineer and transfer the case. 
+If the issue mentioned while reopening the case is unclear or different, follow up with the customer. Consult the TA for further assistance. 
+
+==============================================================================================================================================
+
+
+What Is a Root Cause Analysis (RCA)? 
+Process of identifying the cause of a technical issue after the issue has been remediated 
+Carried out on a separate case from reactive troubleshooting 
+Distinguished from break-fix troubleshooting based on the resolution of the scoped break-fix issue 
+
+Eligibility for an RCA :
+Be aware that a customer's eligibility for RCA is applicable only for specific product or technology area. 
+Request collaboration if the customer is eligible for RCA for the owning team's technology. 
+Collaborating engineers should contribute to the RCA activities. If it's not possible, they must work with the owning engineer to set customer expectations around the RCA restrictions. 
+Don't transfer the case to another team if the customer isn't eligible for RCA based on the other team's product or technology area. 
+
+Handling a Root Cause Analysis (RCA) Case :
+
+1**. Customer requests further effort to identify the root cause. 
+Step 1 
+Identify if RCA is possible based on the scenario and the technology involved. If yes, proceed to step 2. 
+If not, let the customer know and proceed to close the break-fix support case. 
+For Premier Support customers, inform their 1M about the request, and check if they have sufficient advisory hours. 
+Step 2 
+Create a new support case against the advisory line item on the contract. If you are unable to do so, contact the support phone line, 1M, or CSAM. Take 
+its ownership after they create the case. RCA cases can only be Severity B or C or Standard and can never be Severity 1 or A or Critical. 
+Where the root cause is related to multiple issues, create separate cases for investigating each cause. 
+Step 3 
+Close the related break-fix case after documenting the request for an RCA and the case number. 
+Provide the RCA case number to the customer in the closing email. 
+
+2**. Meet initial response and scope all new RCA cases. 
+RCA scoping should include the case number of the break-fix case and an estimate of hours that Microsoft will contribute to the RCA effort. 
+Unified Support cases should not exceed 10 hours or 25% of the labor on the related break-fix support case (whichever is greater). 
+You need to: 
+• Ensure that the customer is aware of the upcoming limit one hour before the scoped limit is reached. 
+• Discuss the conclusion of the completed RCA work with the customer when the labor limit is reached. Check whether they would like to 
+rescope to proceed with further hours or close the case. 
+• Contact the 1M or the CSAM if the customer agrees to increase scoped hours. Before continuing, confirm with them whether the customer 
+has enough advisory hours available. 
+
+Premier Support: End of Sale 
+Over the years, the industry and the customers' demands have changed. 
+The support experience has been transformed with Unified Support to meet the dynamic customers' demands. 
+Customers want fast and agile support to be successful. 
+Premier Support has been discontinued for commercial customers to accelerate the growth of Unified Support and provide a more connected customer experience. 
+
+
+==============================================================================================================================================
+
+
+Understanding Misroutes 
+Misroutes are one of the key drivers of delayed support for our customers. 
+Minimize or fully prevent any case from "bouncing" and ensure that transfers are done without delays. 
+Before transferring a case to another queue, ascertain that it was misrouted. 
+Case "bouncing" happens when the destined queue is also incorrect. It causes delays for our customer and negatively impacts the overall support experience. 
+
+
+Handling Misroutes 
+-> Unclear case notes or description :
+1. Reach out to the customer to discuss the issue and determine what support is required. 
+Call them (if they're fine with a phone call) as it's the fastest way to connect. 
+Leave a voice mail and send a follow-up email if the customer is unavailable. 
+2. Complete the initial response or First Quality Response (FQR). 
+3. Document the customer contact and the newly clarified issue or customer request. 
+4. Swarm to locate the appropriate resources or follow the rerouting steps. 
+
+-> Clear or definitive notes or description 
+If there is sufficient information in the case notes about the nature of the issue and the cause of the misroute (system or human error), you should swarm to find a new owner. 
+Follow the rerouting steps if you are unable to swarm with an appropriate team. 
+
+
+==============================================================================================================================================
+
+
+When Should You Escalate? 
+
+Technical   |   Escalation reasons    |    Non-technical 
+Escalation requests may not be accepted by escalation teams if: 
+• Procedures are not followed. 
+• Collaboration has not been completed. 
+• A resolution has been identified during escalation. 
+Unnecessary escalations create backlogs in the escalation teams, slowing down case progression. 
+
+
+Source Engineer : I'm responsible for initiating escalations as the current service request, problem, or task owner. 
+Follow the process for initiating an escalation: 
+->If an escalation resource is required immediately, avoid using the queue. 
+• Instead, identify an individual to whom you can directly escalate the case. 
+-> Create a new escalation task. 
+• If escalating directly, use a summary template. 
+• If escalating to a queue, use a transfer tem plate. 
+• Complete the templates in English. 
+->Transfer the entity to the known person or queue.  
+-> Follow up on all customer or partner commitments while you wait for a response to the escalation request. 
+
+Receiving Engineer : I'm the engineer who takes ownership of the escalation. 
+If you do not speak the customer's primary language and experience difficulties with communication: 
+Engage the source engineer for assistance. 
+Use translation services if the source engineer is unavailable. 
+
+While handling a tough or aggressive customer: 
+• Begin with a positive attitude. 
+• Listen carefully. 
+• Watch your tone. 
+• Allow the customer to talk and don't interrupt. 
+• Be courteous but firm. 
+• Begin active problem-solving. 
+• Mutually agree on the solution. 
+
+While handling an irate or angry customer: 
+• Allow them to vent. 
+• Be empathetic. 
+• Be polite. 
+• Demonstrate that you understand. 
+• Begin active problem-solving. 
+• Don't interrupt while they are talking. 
+• Listen carefully. 
+
+While handling an abusive customer, don't: 
+• Take anything personally. 
+• Match the tone. 
+• Yell or scream. 
+• Turn off active listening. 
+• Let the person intimidate you. 
+
+What is a Recovery ?
+Recovery is an activity that can be initiated at any stage of the case by either the customer or partner or by anyone in Microsoft. 
+
+Recovery Process 
+1. Ask questions 
+throughout the life of the case to verify the customer's or partner's level of satisfaction. 
+2. Initiate recovery 
+according to the triggers listed in the related documents or information section at the bottom of the 
+Procedure: Recovery article link. 
+3. Empathize 
+and listen to the customer or partner to hear their concern. 
+4. Avoid setting expectations 
+during meetings or written communication. 
+• Don't adopt actions that may be considered by the customer as a validation of the claim. 
+• Don't make commitments or promises to the customer or the partner until you have consulted with the team manager (TM) and incident manager (1M) for Premier or Unified Support. 
+
+Types of Recovery :
+Technical recovery -
+Engage a technical advisor (TA) or a senior engineer to assist with discussing technical case blockers with the customer or partner. 
+Keep the TM and IM for Premier or Unified Suppport informed
+
+Political, Support experience, or product limitation recovery-
+Engage the TM and IM for Premier or Unified Suppport to assist with discussing any concerns the customer or partner has
+
+Competitve recovery -
+Engage the IM for Premier support
+
