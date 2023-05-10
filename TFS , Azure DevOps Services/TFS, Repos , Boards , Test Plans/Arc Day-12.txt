@@ -1,0 +1,6 @@
+
+
+
+-> within 1 project we can have only 1 tfvc
+-> within 1 project we can have any no of git repos
+
