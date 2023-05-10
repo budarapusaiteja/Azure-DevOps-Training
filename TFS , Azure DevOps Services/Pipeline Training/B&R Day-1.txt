@@ -1,0 +1,278 @@
+
+DAY-1    
+
+I will explain you the difference between 
+organization And services with a collection database in server.
+
+
+-----------------------
+There is a 5 % percent delta is there. - something we need to know at the end of the training. 
+---------------------------------------------------
+
+Create new organization :
+-> Name your Azure DevOps organization
+-> We'll host your projects in 
+(in Indian Data centers, DevOps is avialable only in South India.)
+Note : All the Azure data centers dosen't provide DevOps services.
+Note : when we are quque a pipeline (Microsoft Hosted pipeline)- it is not going to restrict itself to South India
+	It could create in any of the regions.
+
+-> Assume each and every organization has its own database associated.
+	Team project Collection Databases. -These databases cannot be accessed by Org owner and CSS team.
+-> Private & Public projects.
+by default only private projects creation is available.
+to allow creating public projects
+Organization settings -> Policies -> Security policies -> Allow public projects.
+
+---------------------------------------------
+
+Create new project :
+Project name -
+Description
+Visibility - public / private / enterprise (enterprise option only organizations connected to microsoft azure actice directoy AAD)
+public projects are diabled by your organization. You can turn on public visibility with Organization policies.
+^ Advanced
+Version control : git(Default) , team foundation version control. tfvc
+Work item process : Basic(default) , Agile , Scrum , CMMI
+Note : for the first time- new organization and creating new project we may not find this advance option,
+creating 2nd project onwards we can find the advance option.
+
+
+You can also create a different version control project from :
+Organization settings -> Process -> All process
+
+-------------------------------------------------------------------------------------------------------
+
+adding users :
+
+Organization settings -> Users -> ALl users -> Add users
+if you are the PCA only , you will get the add users option.
+-> we need to type the entire mail, to add the new user
+-> Access level : Basic, Stakeholder , Visual Studio Subscriber.
+-> Add to projects : list of projects available in org , Add all option.
+-> an email will be sent to the added user, 
+	if the user accepts it, then in his personal Dev.azure user can see the new organization.
+
+-------------------------------------------------------------------------------------------------------
+
+Default user permissions :
+project settings -> Permissions -> Groups
+1. Project Administrators : owners by default
+2. Contributors : all users added by default
+
+-- Permissions are based on the roles.
+Permissions we have 3 options : Not set(implicit deny), Allow, Deny(explicit deny) . 
+------------------------------------------------------------------------------------------------------
+
+When a customer comes with a issue, related to Azure DevOps
+-> we are not allowed to ask any other details, except Organization name, error logs.
+-----------------------------------------------------------------------------------------------------
+
+Case : Azure DevOps organization owner privacy
+A user is unable to create a new project :
+Respose : go and contact your organization owner.
+if he dosen't know the organization owner and ask us org owner name.
+Respose : no , we cannot give org owner name.
+only in one case we can give org owner name - if the user is in same AAD as the Owner. Azure Active Directory
+We can mail the owner of the org, withour user in cc, mentioned this user came to us - unable to create project, please reach out to that person.
+
+There are other so many policies are present , we need to know - like this privacy issues.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Butoons
+Horizontal Ellipsis …
+Vertical Ellipsis ⋮
+Identical To ≡
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Team project :
+lick on create project. It just creates A-Team project for you.
+OK. And inside the team project, you will get all the options to consume.
+OK so here is the summary of the team project in case if you so by default since I created this team project, I'll be there as per the member. 
+In case if you would like to add Members you can just do that OK and then dashboards wiki.
+Yes, 
+boards for Project planning reports to host host repose 
+pipelines to create CI CD.
+Test the plants. You're going for web-based test case management.
+And the artifacts to create your.
+Artifacts and cloud. OK, 
+these are the core features for each and everything
+
+
+
+==============================================================================================================================================================
+
+Day-1 Video-2
+
+maybe in 2018 we gave a heads up to our customers that we.
+We will be no longer utilizing the XAML builds,
+
+
+Agent pools :
+Organization Settings -> Agent pools -> Add pool / (security -> Add -> Add User
+	user or group
+	Role : Reader , Service Account , Administrator.
+
+* Reader role : who will be able to see the agent pools at the DevOps organization level. 
+	they will be only able to see the agent polls, they cannot use it in the pipelines or they cannot add or make this agent pool available to the.In the projects
+* Administrator role : is the one who could actually create a new agent pool at the DevOps organization level, or even they can register, or they can add other users. 
+	Those kind of you know, actions can be performed by the administrator.
+* Service Account : So what it does is whenever the user chooses a build or something, that service account is going to listen for the jobs and it is going to.
+	 builds to the particular agent that is available in the agent pool 
+	So there is no members being added to the service account here.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Organization Settings -> Agent pools -> Default , Azure Pipelines
+Azure Pipelines : jobs , agents , Details , security , Analytics 
+Default : Jobs , Agents , Details , Security , Settings , Maintenance History , Analytics.
+
+Security : Add , Inheritance 
+	Users 
+		Ageentpools , Role(Reader , Service Account , Administrator) , Access.
+Agents : Name , Last run , Current Status , Agent Version(agent is updated automatically based on time period) , Enabled(when multiple agents are available only required is turned on, all other is off
+	we do not need to update the agent manually.
+
+Organization Settings -> Agent pools -> Azure Pipelines -> Agents 
+	Hosted Agent
+		Jobs (the jobs running we can see here) 
+		Capabilities (capabilites will be seen only when we are using a self-hosted agent)
+
+Organization Settings -> Agent pools -> Azure Pipelines -> details
+	we can find the Owner who created the Agent pool , Details
+
+Organization Settings -> Agent pools -> Azure Pipelines -> analytics
+	Based on the no of jobs running
+
+Organization Settings -> Agent pools -> Default -> Settings
+	Auto-provisioning -
+	Agent update settings - when ever a new update is available for the agent, it will udpate
+	Maintenance job - (Whatever the space that has been consumed for that build pipeline on that particular agent machine, 
+		how long do you want to keep it? And those things you will be configuring it here)
+		Schedule a part we are going to provide it here, 
+		On what days you want to run the maintenance jobs
+		how much time the maintenance job has to be done in and during the maintenance job is being queued, 
+		how many agents you know can be utilized and how many jobs agents can be made available during the maintenance period
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml
+
+Microsoft Hosted Agents :
+Hardware :
+* Microsoft-hosted agents that run Windows and Linux images are provisioned on Azure general purpose virtual machines with a 2 core CPU, 7 GB of RAM, and 14 GB of SSD disk space.
+* These virtual machines are co-located in the same geography as your Azure DevOps organization.
+* It could create in any of the regions.(central India, south India, West India, east us, central us)
+
+* Agents that run macOS images are provisioned on Mac pros with a 3 core CPU, 14 GB of RAM, and 14 GB of SSD disk space
+* These agents always run in the US irrespective of the location of your Azure DevOps organization. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Software :
+* So this is about the specs of the Microsoft hosted agent. OK. And if you want to see what are all the softwares that are available on these machines.
+* So there are set of softwares that are listed on the GitHub page for it.
+	Example :
+	https://github.com/actions/runner-images/blob/main/images/win/Windows2022-Readme.md
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Creating Agent pool - Self-hosted :
+
+Organization Settings -> Agent pools -> Add pool 
+	Pool type : Self-hosted , Azure Virtual machine scale set.
+	Name :
+	Description (optional) :
+	Pipeline permissions : check boxes
+		Grant access permission to all pipelines
+		auto-provision this agent pool in all projects
+create.
+---------------------------------
+Note : by default Projects cannot access the agent pools available in Organization level
+	They can only access the default, Azure piplines agent pools
+--------------------------------
+
+Adding newly created agent pool to one of the projects :
+
+now -
+Project settings -> Agent pools -> Add pool -> Add agent pool
+	pool to link : select one
+		New
+		Existing
+	pipeline permissions :
+		Grant access permission to all pipelines.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Create an agent in the newly created Agent pool :
+Organization Settings -> Agent pools -> select the newly created Agentpool
+	Jobs , Agents , Details , Security , Settings , Maintenance History , Analytics.
+	Agents :
+		New agent - download the agent and configure
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Configuring Agent in a Agent pool :
+1. Download the zip file, go to properties and unblock it and then extract the zip file
+2. We can configure the Agent in two ways -
+3. 
+
+
+===============================================================================================================================================================================
+Azure DevOps Training - build & release
+
+
+OK, so we are not discussing about what are the best practices for naming conventions, how to structure and everything OK, but in case if you encounter any questions like that.
+
+ 
+
+Projects in Organization :
+They can create an organization per product team or 
+they can create an organization part enterprise and then they create a team project per product.
+So per product is the right thing for team project.
+It's up to the customer.
+
+ 
+
+add user :
+options access level.
+-> Basic
+-> Stakeholder 
+-> Visual Studio subscriber 
+so these access levels are nothing but your type of licenses.
+By default, when you create an Azure DevOps organization.We provide 5 basic users as free and unlimited stakeholders license is free.
+Anyone above the file from the 6th basic user onwards? In case if you would like to add them.
+You need to set up a billing or you have to use it Visual Studio subscriber.
+Because Studio subscriber license that you will get only if you have a Visual Studio subscription.
+
+ 
+
+Permissions :             Groups  |   Users
+-> Project Administrators
+    The person who created the team project by default, he will be part of the project administrators
+    Project administrators are typically the stakeholders who administer the project, 
+    related activities, who are responsible to manage permissions.
+-> Contributors
+    So by default, whenever you add any user.The user will be part of the contributors group by default.
+-> Readers
+-> Build Administrators 
+-> Training team 
+    A team project A-Team will be created so in in a particular team project there is no rule that only one team should exist.
+    OK, there could be multiple teams working on different features
+--Not set
+--Deny
+--Allow
+
+ 
+
+Don't charge for number of projects, only charge for users.
+============================================================================================================================================
+
+
+Q&A
+
+If a cutomer wants a Mac-OS agent pool in other than us region
+1. it is not possible for Microsoft-hosted agent.
+2. Suggest to create a self hosted agent Mac-Os in user defined location.
+--------------
+
+When we want to add a new software/ new feature to our self hosted agent.
+1. Install the requied in the self-hosted machine - eg: jdk11
+2. now go to User defined capabilites in the 
+Organization Settings -> Agent pools -> Agent pool -> Agent -> Capabilites
+Name : jdk
+Value : c:\\jdk\jdk11   (location on self-hosted agent machine)
