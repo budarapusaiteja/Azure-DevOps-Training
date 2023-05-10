@@ -1,0 +1,94 @@
+Day-1 SA   by Romit Gulati
+The total course is from the admin point of view
+
+Azure DevOps Server / Team Server Architecture :
+
+---------------------------------------
+Different Versions
+TFS 2010 -> till today, the architecture is same only small changes
+Once you upgrade , you cannot go back.
+You can directly upgrade form TFS2010 to ADS 2020 also, no need to follow step by step upgrade.
+
+Customer asks to Install :
+-> Server (90%)
+-> Express edition () - can be installed on client machine also.
+-- When we install 
+-----------------------------------------
+Core Components :
+-> SQL Server
+-> Microsoft IIS
+
+Optional Components:
+-> SQL Reporting Services (Depreciated from ADS 2022)
+-> SharePoint(depreciated form TFS 2018 onwards)
+-> Search Service. 
+	we can search workitem or wiki or .
+
+------------------------------------------
+Server to Service conversion:
+
+Architecture :
+- Both the Application tier and Data Tier hosts the Website.
+Application Tier - There may be 2-3  machines hosting Application tier
+
+- Database hosts the metadata -
+In Server -> We have multiple collections -> Under each collection we have multiple project.
+Configuration Database - is like a master database (project, user data) (metadata).
+
+Once the Server is moved to Service - Then User don't have access to Organization Databases.
+
+----------------------------------------------
+
+Trust and Forests Considerations for Azure DevOps Server :
+
+Every hour TFS connects to the AAD and check for changes.
+Domain
+Trust : When we have full trust (access) , then the other domain can access our resources/files
+-> One way trust
+-> Two way trust
+
+----------------------------------------------
+Components, terms :
+
+Data tier - Where the data is stored.
+Project collection
+Project
+Azure DevOps Server Administration Console - Where you can manage from Admin point of view
+SQL Server and SQL Server Reporting Services
+
+----------------------------------------------
+
+Scalability - Why some cust still use server
+
+Multiple Application Tiers
+Add/Remove Application Tiers
+NLB
+Can be 
+
+----------------------------------------------
+
+Server vs Service (Admin Story)
+
+--In service every 3 weeks new feature is pushed by microsoft.
+--In server , customer will release a patch, then user can intall or not , it's up to them.
+
+
+----------------------------------------------
+When customer want to upgrade , then the database should be backup
+before upgrade
+----------------------------------------------
+
+Types of cases :
+Upgrade
+Notifications
+Server to server upgrade.
+
+----------------------------------------------
+
+
+
+two VM's :
+Windows server 2016 
+ 
+--------------
+We will get the cases form the Server admin
