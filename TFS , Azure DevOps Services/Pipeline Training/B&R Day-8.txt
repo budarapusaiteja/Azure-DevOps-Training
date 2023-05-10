@@ -1,0 +1,99 @@
+
+
+
+
+
+Pipelines - Get Sources - 
+	Clean
+	Tag sources
+	Always
+	Tag format (we can create a new empty variable and give tag while executing)
+	Recursion level
+		Checkout files from LFS
+		Don't sync sources
+		Sync tags
+		Shallow fetch
+
+Agent job | Agentless job
+	Agent selection 
+		Agent pool - Azure pipelines , inherit from the pipeline , Default(it can pick any one from all the available Agents)
+		Default Demands - Agent.Name = Value (to pick any specific Agent from the available agents)
+		go to Project settings -> Agent pools -> Select Default -> Agents - select one Agent -> capabilities -> System capabilities -Agent.Name = Value
+	
+	Execution plan Parallelism - 
+		None 
+		Multi-configuration (when we want to execute same task in different environments - linux, ubuntu ,windows  -these three we should implement in variables , in some programming languages like .net runtime command use these variables)
+		Multi-agent (parallelly we are executing same task in all the agents) 
+	
+	Dependencies -
+		When we have 2 or more agents , when we want to make dependencies in the job
+		
+	Additional options
+		Allow scripts to access the OAuth token
+		Run this job - only when all previous jobs have succeeded
+	
+	
+Pipeline -> job -> Options
+	Build job - Project collection (when we want to access the repo from another project we use this option)
+	History - when we modify pipeline , records store here.
+	Security - inheritance is on - for individual user / group we can set access
+	
+-> Job access tokens
+-> Timeouts https://learn.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=classic
+	when we are using self hosted agents , there is no timeout  for the self-hosted agent
+	for Microsoft - hosted agent default is 
+		60 minutes for private projects // we can opt for the additional capacity it by paying extra...
+		6 hours for public projects
+-> Microsoft - hosted agents 
+	Capabilities and limitations -
+	Provides 10GB of storage for your source and build outputs together.
+	
+=> If Microsoft - hosted agents don't meet your needs, then you can deploy your own self-hosted agents or use scale set agents.
+
+
+Pipelines -> Library 
+	Variable groups
+	Secure files
+		for any Mac OS export build project that I OS projects right, you need to have this certificate installed
+		we will store those certificates in this secure files - this is encrypted one
+		when we want to add any SSH keys , we can add here.
+When we want to access keys - from Azure portal 
+	Library -> Variable group - Link secrets from an Azure key vault as variables
+
+		
+When we want to use these stored secure files 
+	Pipeline edit -> job -> Add a task - search for Download secure file
+	
+
+
+Project Settings -> Service hooks (these are the webhooks for triggering the RestAPI's)
+	select one subscription
+	Trigger - set filters /  Build complete
+	Get the URL's from the below link and modify the URL based on org name and project name and pipeline number
+	we should provide the username and the PAT token as password.
+
+https://learn.microsoft.com/en-us/rest/api/azure/devops/build/builds/get?view=azure-devops-rest-7.0
+
+All the browser calls are GET calls, when we want to use post calls for REST API
+	we need to use postman.
+	
+
+========================================================================================================================================
+Configuring access to other organizations
+https://learn.microsoft.com/en-us/samples/azure-samples/azure-pipelines-remote-tasks/azure-pipeline-remote-tasks/
+a service connection of type Azure Repos/Team Foundation Server is required to access the organization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
