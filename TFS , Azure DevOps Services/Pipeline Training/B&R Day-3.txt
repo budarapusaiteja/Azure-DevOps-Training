@@ -1,0 +1,74 @@
+Day- 3 :
+
+-> .NET is only for the Windows platform and 
+-> .NET core. You can use it for the the cross-platform.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Angular JS project is fully for the uh single type of JavaScript application.
+-> node JS is again cross-platform support is available
+
+NPM command = node JS can be build by using 
+NPM is a part of Node JS 
+don't have to install separately the NPM utility
+
+
+If customer comming with node.js project :
+How to download node JS sdk's : node.js
+-> Always check the node.js version match with npm
+https://nodejs.org/en/download/releases/
+
+In Azure Pipelines -> Tasks -> Use Node 12.8.0 -> Version Spec
+	Here what ever the version you mention, this will be intalled on the microsoft hosted agent
+	eg : 12.8.0
+
+-------------------------------------------------
+npm commands :
+npm install - form the project location : 
+	it will install the related dependencies mentiond inthe package.json file and put it in the node_modules folder.
+	
+we need to zip the source code and give it to the development team
+
+npm start - 	
+	so that application will be start
+	
+npm test -
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVA Projects :
+1. jdk instllation : https://www.oracle.com/in/java/technologies/downloads/
+Environment variables: 
+new variable : JAVA_HOME : java home path
+2. Maven : https://maven.apache.org/download.cgi
+3. ANT : https://ant.apache.org/bindownload.cgi
+
+
+Maven : Project Management tool and Build tool
+pom.xml
+What you want to create war,jar
+In pom.xml we will mention what we want - war or jar ,dependencies,plugins. maven will take care of build
+Maven has Build lifecycle phases
+
+ANT : Build tool
+build.xml
+How you are going to build a package
+eg : https://github.com/mikeci/mike-ibatis-jpetstore-ant/blob/master/build.xml
+
+Based on the build.xml(step by step how to build a jar/war) the build will occur
+
+
+
+Tomcat server :
+Download :
+https://tomcat.apache.org
+
+
+-----------------------------------------
+after creating a build 
+now zip the resulted war file folder and rename the extension as .war
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dev.azure.com
+Project -> Artifacts -> Connect to feed -> select any / maven -> you will get commands to setup
+- add in pom.xml
+- add in settings.xml
