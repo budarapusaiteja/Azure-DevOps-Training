@@ -1,0 +1,200 @@
+
+
+Azure DevOps Boards / Repos | Azure Lab Service / DevTest Labs / DevBox.
+
+1. How to check , the user is owner or a member of a organization
+	ADo -> Profile -> last option -> we can see all the AAD's and organization (owner or a member)
+	with the same email id - but when you want to change AAD , we need to login again
+	
+2. When a customer asks, that my org is working fine in ADService, not working in Azure DevOps server
+	then check the Azure devops service network logs and find the 
+	year, month, date of service () and sprint - you will know which service version the organization is present.
+	Then suggest the related version to install on the server.
+	
+3. can we make the customer server / org move to service 
+	is only possible to the newer versions of server - only above 2020 versions
+	for older versions , upgrade to the newer versions and then migration is possible
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Introduction to Azure Boards :
+
+Azure Boards is a service for managing the 
+work for your software projects. Teams need 
+tools that flex and grow. Azure Boards does 
+just that, brining you a rich set of capabilities 
+including native support for Scrum and 
+Kanban, customizable dashboards, and 
+integrated reporting. 
+
+With the Azure Boards web service, teams 
+can manage their software projects. It 
+provides a rich set of capabilities including 
+native support for Scrum and Kanban, 
+customizable dashboards, and integrated 
+reporting. These tools can scale as your 
+business grows. 
+
+Core Features :
+
+Process (Or Process templates) 
+Workitems 
+Workitem queries 
+Boards 
+Backlogs 
+Dashboards 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Process Guidance : CMMI     AGILE       SCRUM
+	these are the processes - CMMI     AGILE 	SCRUM
+Organization settings -> Boards - Process :
+	lock symbol - they cannot be customized - Agile , Scrum , CMMI
+		Options availble - New team project , create inherited process , set as default process , Disable process , security
+		drop down proccess
+		for these processes options avaiable - New team project , Edit , Create copy of process , set as default process , disable process , security
+-> You can't just go ahead and edit them. Just to edit them, you need to inherit the core template.
+Process(Agile)	-> Inheritance based - copy (there exists are loose relation b/w Agile and inherited copy) -> edit
+If we copied 100 projects and want to add a new feature to all of them ,
+		when we add a new feature in the Parent Agile, it will be reflected in all the copied processes.
+
+-> When we want to change/move process to another we can do it Select a process - right last option number - (Work item types , Backlog levels , Projects) -> projects 
+	vertical ... -> Change process -> Select a target proces 
+	when we make a change , we need to be cautious - if the target process is a different one - all the previous data will be lost.
+
+-> Process is just as a placeholder. It's just a placeholder where it provides some files for you - For customization perspective
+
+Process template :
+Organization settings -> Boards - Process :	
+	</> symbol - these are XML based (hosted xml based)process templaes , we can customize by exporting the process templates.
+		Options avaiable - Clone process to inherited , enable process , Export .
+-> Process(Agile) -> Export (there exists no relation b/w Agile and exported) -> edit.
+If we exported 100 projects and want to add a new feature to all of them ,
+	we need to add the new feature to all the 100 exported projects individually
+
+Process template folder - when we export process template and extract , you can see these folders
+Build 
+	build.xml - contains permissions - Readers, contributor 
+Classification 
+Groups and Permissions 
+Lab 
+Reports 
+Test Management 
+Version Control 
+Workltem Tracking 
+ProcessTemplate.xml -process template dot XML file have all the references to the other folders
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Process TEMPLATE :
+
+-> A model gives us an understanding of discrete elements in our organizations and helps 
+us formulate language and discussion of what needs to be improved and how such 
+improvement might be achieved. A model offers the following benefits: 
+
+-> provides a common framework and language to help communicate 
+
+-> leverages years of experience 
+
+-> helps users keep the big picture in mind while focusing specifically on improvement 
+
+-> is often supported by trainers and consultants 
+
+-> can provide a standard to help solve disagreements 
+
+
+Types of Process Templates :
+
+1. Hosted XML :
+• XML based structured definitions and can be customized by modifying the XML definitions 
+• YOU can use WITadmin command line interface for managing workitems 
+	we can't switch the Process templates in team projects
+	
+2. Inherited Process Model :
+• This model supports customization of projects through a UI editor. 
+• No WITadmin command line interface. 
+	When you make changes to the parent process template, those changes will reflect in child process templates
+	we can switch Process templates in team projects.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SCRUM
+
+->Scrum is a framework within which people can address 
+complex adaptive problems, while productively and 
+creatively delivering products of the highest possible value. 
+
+->Scrum itself is a simple framework for effective team 
+collaboration on complex products. 
+
+->Scrum co-creators have written The Scrum Guide to explain 
+Scrum clearly and succinctly. This Guide contains the 
+definition of Scrum. This definition consists of Scrum's roles, 
+events, artifacts, and the rules that bind them together. 
+
+->Scrum is: Lightweight, Simple to understand, Difficult to 
+master 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Process :A process defines the building blocks of the 
+work item tracking system and supports the 
+Inheritance process model for Azure Boards. 
+This model supports customization of projects 
+through a WYSIWYG user interface. 
+
+Process template : defines the building blocks 
+of the work item tracking system as well as 
+other sub-systems you access through Azure 
+Boards or an on-premises Azure DevOps Server 
+or Team Foundation Server (TFS). It supports 
+Hosted XML and On-premises XML process 
+models which support customization of 
+Projects through the modification and import
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Team projects we have integration with - Sharepoint , SQL reporting services ,
+	there are few resources in SSRS shows about team project.
+	
+When we create team project in TFS via web - it will not directly integrate with Reporting services and Sharepoint ,
+we need to do integration manually
+
+Creating Team project via Visual studio takes more time - due to integration with SSRS and sharepoint
+
+-> In SSRS All the reports will be of 1 format that is RDL files(Report definition language)
+	This RDL files query the internal DB's. It could be analysis SSAS or any relational schema  -
+	(based upon it will show the data in pictorial format or a graphs)
+	
+-> TFS version and Visual studio version must match
+
+
+-> Difference between TFS group and AAD group, 
+	TFS group is that you can create directly in TFS and 
+	AAD group is Active Directory group that is going to be added to TFS.
+	TFS group by default - Project administrator , Builders, Team Foundation administrators - will be created by your TFS.
+	
+=> How to create Process template ?
+	download - organization settings -> Process -> angular braces process templates
+	
+=> How do we get the angular braces process templates and import process option ?
+	when TFS collection migrated from TFS to Azure DevOps Services, we will get those options.
+	
+
+
+
+
+
+
+
+
+
+
+
+
