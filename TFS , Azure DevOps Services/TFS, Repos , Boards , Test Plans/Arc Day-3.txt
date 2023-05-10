@@ -1,0 +1,78 @@
+Windows IIS  -by Jithin Kunjukunju Raju
+
+Basics about IIS :
+
+HTTP :
+-> Hypertext transter protocol is a communications protocol
+	that clients and servers use to communicate and exchange data
+-> For data exchange to take place, Http depends on two other network protocols:
+	TCP(Transmission Control Protocol) and IP(Internet Protocol).
+-> HTTP is stateless, meaning the here is no like between two requests being
+	successfully carried out on the same connection.
+
+
+Anatomy of an HTTP Request :
+- Establish a TCP connnection from the client to the server.
+- Client initiates an HTTP request to the server.
+- HTTP server response to the HTTP request.
+- HTML page is loaded on client browser.
+
+--> HTTP archive 
+
+HTTP : User <-> Insecure COnnection <-> Normal HTTP
+	3 way handshake using TCP, IP
+HTTPS : User <-> Encrypted Connection <-> Secure HTTPS
+	TLS(transport layer security) , SSH(Secure shell) handshake , Certificates
+
+----------------------------------------------------------------------------------------------------------------------------
+
+IIS Architecture and components :
+
+svchost.exe
+Windows Activation Service(WAS)   
+	Configuration store.       
+World wide web Publishing Service(WWW)
+Applicationhost.config
+Application pool
+	W3wp.exe
+	Manage pipeline mode : Integrated (we will use this) , Classic
+User mode
+Kernel mode
+HTTP protocol stack(http.sys) <- Internet <- Client
+
+--> When your website is down , and its showing some errors
+	first go and check WAS , WWW are up and running
+
+----------------------------------------------------------------------------------------------------------------------------
+
+IIS Request Flow : (covered some of the main events)
+
+Tcip.sys Kernel Driver ->
+Http.sys Kernel Driver ->
+Http.sys API ->
+w3wp.exe
+	Request -> Begin -> Authenticate (Basic auth, Windows auth, Forms auth)(credentials) -> Authorize(what are the access available)(URL auth'z) -> 
+	Resolve chache -> Map handler(Native handlers(Static files) , Managed handlers(Net pages)) -> Log request -> Response
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Bindings :
+Site Bindings
+	Type : http
+	Host name :
+	Port : 8080
+	IP Address : *
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Logs :
+
+1. IIS logs : IIS logs location c:\inetpub\logs\LogFiles\w3svc2
+Select Application pool -> website -> Team Foundation Server
+Log File 
+	Format : W3C
+	Select Fields :
+	Directory :
+	Encoding
+
+2. FREV logs :
